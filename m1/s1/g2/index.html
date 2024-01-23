@@ -20,7 +20,7 @@
   </head>
   <body>
     <header>
-      <img src="./logo.svg" alt="logo epicode" style="width: 150px" />
+      <img src="./assets/logo.svg" alt="logo epicode" style="width: 150px" />
       <h1>Epicode - Il Blog dei developers</h1>
       <nav>
         <ul>
@@ -37,8 +37,8 @@
       </nav>
     </header>
     <main>
-      <section>
-        <article>
+      <article>
+        <section>
           <h2>Come creare un template per i post</h2>
           <h3>di Mario Rossi - pubblicato il 25-10-2020</h3>
           <p>
@@ -59,6 +59,8 @@
               <code>&lt;footer&gt </code>
             </li>
           </ul>
+        </section>
+        <section>
           <p>Formattazione del codice</p>
           <ol>
             Il testo dell'articolo dovrà essere formattato per identificare
@@ -73,69 +75,68 @@
             </li>
             <li>Applicare gli stili CSS</li>
           </ol>
-      
-      </section>
-      <section>
-        <p>
-          L'applicazione di stili CSS è cresciuta nel anni fino a raggiungere la
-          diffusione pressochè totale.
-        </p>
-        <table>
-          <caption>
-            Diffusione dei CSS:
-          </caption>
-          <thead>
-            <tr>
-              <th>Anno</th>
-              <th>% di utilizzo</th>
-              <th>Supporto browsers</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2000</td>
-              <td>20%</td>
-              <td>17%</td>
-            </tr>
-            <tr>
-              <td>2002</td>
-              <td>35%</td>
-              <td>22%</td>
-            </tr>
-            <tr>
-              <td>2004</td>
-              <td>45%</td>
-              <td>42%</td>
-            </tr>
-            <tr>
-              <td>2008</td>
-              <td>80%</td>
-              <td>51%</td>
-            </tr>
-            <tr>
-              <td>2012</td>
-              <td>100%</td>
-              <td>76%</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Un test di validazione potrà essere fatto tramite il tool online
-          <a href="#">-LINK ESTERNO</a> dedicato allo scopo. Una volta
-          ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere
-          stati dei veri developers come loro:
-        </p>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Cs12sfnFkYs?si=ZWKIGr-ETvGcAsbj"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </section>
-    </article>
+        </section>
+        <section>
+          <p>
+            L'applicazione di stili CSS è cresciuta nel anni fino a raggiungere
+            la diffusione pressochè totale.
+          </p>
+          <table>
+            <caption>
+              Diffusione dei CSS:
+            </caption>
+            <thead>
+              <tr>
+                <th>Anno</th>
+                <th>% di utilizzo</th>
+                <th>Supporto browsers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2000</td>
+                <td>20%</td>
+                <td>17%</td>
+              </tr>
+              <tr>
+                <td>2002</td>
+                <td>35%</td>
+                <td>22%</td>
+              </tr>
+              <tr>
+                <td>2004</td>
+                <td>45%</td>
+                <td>42%</td>
+              </tr>
+              <tr>
+                <td>2008</td>
+                <td>80%</td>
+                <td>51%</td>
+              </tr>
+              <tr>
+                <td>2012</td>
+                <td>100%</td>
+                <td>76%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Un test di validazione potrà essere fatto tramite il tool online
+            <a href="#">-LINK ESTERNO</a> dedicato allo scopo. Una volta
+            ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere
+            stati dei veri developers come loro:
+          </p>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Cs12sfnFkYs?si=ZWKIGr-ETvGcAsbj"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </section>
+      </article>
     </main>
     <aside>
       <div>
@@ -148,37 +149,21 @@
           <button>Iscriviti!</button>
         </form>
       </div>
-      <article>
-        <table>
-          <caption>
-            Articoli correlati:
-          </caption>
-          <thead>
-            <tr>
-              <th>Titolo</th>
-              <th>Categoria</th>
-              <th>Anno</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">Validare il codice HTML</a></td>
-              <td>Develop</td>
-              <td>18-9-2020</td>
-            </tr>
-            <tr>
-              <td><a href="#">Correggere la sintassi</a></td>
-              <td>Develop</td>
-              <td>16-9-202</td>
-            </tr>
-            <tr>
-              <td><a href="#">Kb nella pagina</a></td>
-              <td>ottimizzazione</td>
-              <td>30-9-2020</td>
-            </tr>
-          </tbody>
-        </table>
-    </article>
+      <div>
+        <h3>Articoli Correlati:</h3>
+        <a href="#">Validare il codice HTML</a>
+        <p>Categoria: Develop</p>
+        <p>Data: 18-9-2020</p>
+        <hr />
+        <a href="#">Correggere la sintassi</a>
+        <p>Categoria: Develop</p>
+        <p>Data: 186-9-2020</p>
+        <hr />
+        <a href="#">Meno kb nella pagina</a>
+        <p>Categoria: ottimizzazione</p>
+        <p>Data: 18-9-2020</p>
+        <hr />
+      </div>
     </aside>
     <footer>
       <div>
