@@ -20,7 +20,7 @@ img {
 }
 .main-container {
   width: 40%;
-  margin: auto;
+  margin: 0 auto;
 }
 h1 {
   text-align: center;
