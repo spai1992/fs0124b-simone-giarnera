@@ -12,7 +12,7 @@ body {
     rgba(11, 110, 136, 1) 100%
   );
   text-align: center;
-  box-shadow: 5px 5px 5px 0px gray;
+  box-shadow: 0px 0px 10px 0px gray;
 }
 
 .logo {
@@ -47,7 +47,7 @@ h1 {
   background-color: white;
   margin: 40px 0;
   padding: 20px;
-  box-shadow: 5px 5px 5px 0px gray;
+  box-shadow: 0px 0px 10px 0px gray;
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
@@ -98,6 +98,9 @@ td {
   padding: 10px;
   text-align: center;
 }
+tr:nth-of-type(even) {
+  background-color: rgb(197, 197, 197);
+}
 iframe {
   width: 420px;
   border-radius: 20px;
@@ -121,11 +124,19 @@ form {
   text-align: center;
 }
 input {
-  width: 70%;
+  width: 250px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px dashed gray;
 }
 button {
   background-color: #507acf;
   color: white;
+  width: 100px;
+  height: 30px;
+  padding: 0;
+  border: 0;
 }
 h3 {
   text-align: center;
@@ -136,9 +147,11 @@ h3 {
   background-color: rgb(216, 216, 216);
   margin: 15px 0;
   border: 1px solid gray;
+  box-sizing: border-box;
+  padding: 10px;
 }
-.articoli a {
-  padding: 20px;
+.titoli-art {
+  margin: 20px;
 }
 .articoli p {
   font-size: 1.2rem;
@@ -149,7 +162,7 @@ h3 {
 }
 .date {
   text-align: right;
-  padding: 15px;
+  padding-right: 5px;
 }
 .footer-container {
   background: rgb(0, 85, 102);
@@ -160,7 +173,7 @@ h3 {
   );
   color: white;
   text-align: center;
-  box-shadow: 5px 5px 5px 0px gray;
+  box-shadow: 0px 0px 10px 0px gray;
 }
 .footer-container p {
   font-size: 1.2rem;
