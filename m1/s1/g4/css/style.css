@@ -13,6 +13,7 @@ body {
     rgba(11, 110, 136, 1) 100%
   );
   text-align: center;
+  box-shadow: 5px 5px 5px 0px gray;
 }
 
 .logo {
@@ -47,10 +48,9 @@ h1 {
   background-color: white;
   margin: 40px 0;
   padding: 20px;
-  box-shadow: 10 10 10 10px black;
+  box-shadow: 5px 5px 5px 0px gray;
   font-size: 1.5rem;
   line-height: 2.5rem;
-  border: 1px solid black;
 }
 .main-container p {
   margin: 20px 0;
@@ -69,6 +69,8 @@ h1 {
   color: gray;
   font-size: 1.4rem;
   margin-bottom: 10px;
+  padding: 0;
+  text-align: left;
 }
 .main-container ul li span {
   background-color: rgb(210, 210, 210);
@@ -159,6 +161,7 @@ h3 {
   );
   color: white;
   text-align: center;
+  box-shadow: 5px 5px 5px 0px gray;
 }
 .footer-container p {
   font-size: 1.2rem;
