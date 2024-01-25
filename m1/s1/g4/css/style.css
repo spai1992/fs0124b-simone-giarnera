@@ -1,15 +1,49 @@
-/* IMPOSTAZIONI GENERALI */
+body {
+  background-image: url(../img/sfondo.png);
+  font-family: "Poppins", sans-serif;
+}
+.all-container {
+  margin: 20px;
+}
+.topbar {
+  background: rgb(0, 154, 188);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 154, 188, 1) 0%,
+    rgba(11, 110, 136, 1) 100%
+  );
+  text-align: center;
+}
 
-/* HEADER */
+.logo {
+  width: 300px;
+  padding: 30px;
+  display: inline-block;
+}
 
-/* MAIN */
-
-/* ELEMENTI NEL MAIN - ARTICLE */
-
-/* TABELLE */
-
-/* FORM */
-
-/* ELEMENTI NELL' ASIDE */
-
-/* FOOTER */
+.topbar-title {
+  text-align: center;
+  font-size: 1.4rem;
+}
+nav {
+  text-align: center;
+  padding: 10px;
+}
+h1 {
+  color: white;
+}
+.topbar li {
+  padding: 5px;
+}
+.topbar a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.topbar ul {
+  padding: 20px;
+}
+.main-container {
+  background-color: white;
+  margin: 20px 0;
+}
