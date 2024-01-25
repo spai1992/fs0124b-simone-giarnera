@@ -1,10 +1,9 @@
 body {
   background-image: url(../img/sfondo.png);
   font-family: "Poppins", sans-serif;
+  margin: 15px;
 }
-.all-container {
-  margin: 20px;
-}
+
 .topbar {
   background: rgb(0, 154, 188);
   background: linear-gradient(
