@@ -45,5 +45,108 @@ h1 {
 }
 .main-container {
   background-color: white;
+  margin: 40px 0;
+  padding: 20px;
+  box-shadow: 10 10 10 10px black;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  border: 1px solid black;
+}
+.main-container p {
   margin: 20px 0;
+}
+.main-container ul li {
+  list-style: disc;
+  margin-left: 30px;
+}
+.titolo-principale {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 15px 0;
+  line-height: 4rem;
+}
+.autore {
+  color: gray;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.main-container ul li span {
+  background-color: rgb(210, 210, 210);
+  border: 0.5px solid black;
+  border-radius: 10px;
+}
+.color-text {
+  color: #aa2072;
+}
+ol {
+  list-style: decimal;
+  margin-left: 30px;
+}
+table {
+  border-bottom: 2px solid #507acf;
+  margin-bottom: 15px;
+}
+th {
+  background-color: #507acf;
+  color: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+td {
+  padding: 10px;
+  text-align: center;
+}
+iframe {
+  width: 420px;
+  border-radius: 20px;
+}
+table p a {
+  color: #507acf;
+}
+.newsletter {
+  background-color: rgb(216, 216, 216);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 15px;
+  margin: 20px 0;
+}
+.news-title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+}
+form {
+  text-align: center;
+}
+input {
+  width: 70%;
+}
+button {
+  background-color: #507acf;
+  color: white;
+}
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+}
+.articoli {
+  background-color: rgb(216, 216, 216);
+  margin: 15px 0;
+  border: 1px solid gray;
+}
+.articoli a {
+  padding: 20px;
+}
+.articoli p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.category {
+  padding-left: 15px;
+}
+.date {
+  text-align: right;
+  padding: 15px;
 }

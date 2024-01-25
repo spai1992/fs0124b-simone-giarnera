@@ -47,32 +47,43 @@
         <main>
           <article>
             <section>
-              <h2>Come creare un template per i post</h2>
-              <h3>di Mario Rossi - pubblicato il 25-10-2020</h3>
+              <h2 class="titolo-principale">
+                Come creare un template per i post
+              </h2>
+              <h3 class="autore">
+                <i class="fas fa-edit"></i>di Mario Rossi -
+                <i class="fas fa-clock"></i>pubblicato il 25-10-2020
+              </h3>
               <p>
                 La prima cosa da fare è suddividere in blocchi logici la pagina,
-                identificando le parti comuni da applicare a tutte le pagine
+                identificando le <span class="color-text">parti comuni</span> da
+                applicare a tutte le pagine
               </p>
+              <p>Le varie aree saranno suddivise in:</p>
               <ul>
-                Le varie aree saranno suddivise in:
                 <li>
-                  Contenuti di intestazione del tag <code>&lt;header&gt </code>
+                  Contenuti di intestazione del tag
+                  <span><code>&lt;header&gt </code></span>
                 </li>
                 <li>
                   Contenuti centrali variabili del tag
-                  <code>&lt;main&gt </code> (corpo principale)
+                  <span><code>&lt;main&gt </code></span> (corpo principale)
                 </li>
                 <li>
                   Contenuti di fine pagina comuni, da inserire nel tag
-                  <code>&lt;footer&gt </code>
+                  <span><code>&lt;footer&gt </code></span>
                 </li>
               </ul>
             </section>
             <section>
               <p>Formattazione del codice</p>
-              <ol>
+              <p>
                 Il testo dell'articolo dovrà essere formattato per identificare
-                tutte le parti da selezionare con i CSS. Perciò i passi saranno:
+                tutte le parti da
+                <span class="color-text">selezionare con i CSS.</span>
+                Perciò i passi saranno:
+              </p>
+              <ol>
                 <li>
                   Progettare il markup assegnando ad ogni specifico testo il tag
                   appropriato
@@ -130,7 +141,7 @@
               </table>
               <p>
                 Un test di validazione potrà essere fatto tramite il tool online
-                <a href="#">-LINK ESTERNO</a> dedicato allo scopo. Una volta
+                <a href="#">tool online</a> dedicato allo scopo. Una volta
                 ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed
                 essere stati dei veri developers come loro:
               </p>
@@ -148,29 +159,37 @@
         </main>
         <aside>
           <div>
-            <p>
-              Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla
-              nostra newsletter:
-            </p>
-            <form action="Form">
-              <input type="email" placeholder="inserisci la tua mail:" />
-              <button>Iscriviti!</button>
-            </form>
+            <div class="newsletter">
+              <p class="news-title">NOVITA'</p>
+              <p>
+                Vuoi rimanere aggiornato su altre novità del blog? Iscriviti
+                alla nostra newsletter:
+              </p>
+              <div class="form">
+              <form action="Form">
+                <input type="email" placeholder="inserisci la tua mail:" />
+                <button>Iscriviti!</button>
+              </form>
+            </div>
           </div>
-          <div>
-            <h3>Articoli Correlati:</h3>
+          
+            <h3>ARTICOLI CORRELATI:</h3>
+            <div class="articoli">
             <a href="#">Validare il codice HTML</a>
-            <p>Categoria: Develop</p>
-            <p>Data: 18-9-2020</p>
-            <hr />
+            <p class="category"><i class="fas fa-tag"> </i> Categoria: Develop</p>
+            <p class="date"><i class="far fa-calendar-alt"></i> Data: 18-9-2020</p>
+            </div>
+         
+          <div class="articoli">
             <a href="#">Correggere la sintassi</a>
-            <p>Categoria: Develop</p>
-            <p>Data: 186-9-2020</p>
-            <hr />
-            <a href="#">Meno kb nella pagina</a>
-            <p>Categoria: ottimizzazione</p>
-            <p>Data: 18-9-2020</p>
-            <hr />
+            <p class="category"><i class="fas fa-tag"></i> Categoria: Develop</p>
+            <p class="date"><i class="far fa-calendar-alt"></i> Data: 186-9-2020</p>
+          </div>
+          <div class="articoli">
+          <a href="#">Meno kb nella pagina</a>
+            <p class="category"><i class="fas fa-tag"></i> Categoria: ottimizzazione</p>
+            <p class="date"><i class="far fa-calendar-alt"></i> Data: 18-9-2020</p>
+           
           </div>
         </aside>
       </div>
