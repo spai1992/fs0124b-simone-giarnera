@@ -160,3 +160,11 @@ h3 {
   color: white;
   text-align: center;
 }
+.footer-container p {
+  font-size: 1.2rem;
+  padding: 15px;
+  line-height: 2rem;
+}
+.footer-container a {
+  color: #aa2072;
+}
