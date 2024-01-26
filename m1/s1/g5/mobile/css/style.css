@@ -1,1 +1,48 @@
-/* Your styles here */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #393d41;
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+header {
+  background-color: black;
+  text-align: center;
+}
+header img {
+  width: 180px;
+  padding: 30px;
+}
+h1,
+h2,
+h3 {
+  color: #25a2c3;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.under-topbar {
+  background-image: url(../images/banner.jpg);
+  background-size: 150%;
+  background-repeat: no-repeat;
+
+  text-align: center;
+}
+.under-topbar h1 {
+  font-size: 2.8rem;
+  line-height: 3rem;
+  padding-top: 40px;
+}
+.under-topbar p {
+  font-size: 1.5rem;
+  padding: 20px;
+}
+.under-topbar a {
+  background-color: #f04c2f;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  padding: 15px 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
