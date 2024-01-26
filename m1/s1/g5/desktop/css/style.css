@@ -99,26 +99,27 @@ h3 {
 }
 aside {
   display: inline-block;
-  padding: 50px;
+  padding: 70px;
 }
 .info-container {
   border: 1px solid #dee1e3;
-
-  width: calc(33.333% - 20px);
-
+  width: 30%;
   display: inline-block;
   text-align: center;
+  margin: 20px;
 }
 .info-container img {
   width: 100%;
-  height: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .info-container h3 {
   font-size: 1.3rem;
+  padding-top: 20px;
 }
 .info-container p {
-  padding: 15px;
+  padding: 30px;
   margin-bottom: 30px;
 }
 footer {
@@ -134,7 +135,7 @@ footer h3 {
 }
 footer hr {
   width: 230px;
-  margin: 40px auto;
+  margin: 40px 0;
 }
 .footer-container {
   display: inline-block;
