@@ -27,30 +27,41 @@ booleana: ammette solamanete 2 valori, true o false, utilizzato durante i contro
  Crea una variable chiamata "myName" e assegna ad essa il tuo nome, sotto forma di stringa.
 */
 
+let myName = "Simone";
+console.log(myName);
+
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let primo = 12;
+let secondo = 20;
+console.log(primo + secondo);
 
 /* ESERCIZIO 4
  Crea una variable di nome "x" e assegna ad essa il numero 12.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let x = 12;
 
 /* ESERCIZIO 5
   Riassegna un nuovo valore alla variabile "myName" già esistente: il tuo cognome.
   Dimostra l'impossibilità di riassegnare un valore ad una variabile dichiarata con il costrutto const.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* let myName = "Giarnera";
+const prova = "Costante";
+let prova = "Seconda costante";
+console.log(prova);
+
+ERRORE IN CONSOLE: Uncaught SyntaxError: Identifier 'myName' has already been declared (at D1.js:52:5) */
 
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let valore = 4;
+console.log(valore - x);
 
 /* ESERCIZIO 7
  Crea due variabili: "name1" e "name2". Assegna a name1 la stringa "john", e assegna a name2 la stringa "John" (con la J maiuscola!).
@@ -58,4 +69,7 @@ booleana: ammette solamanete 2 valori, true o false, utilizzato durante i contro
  EXTRA: verifica che la loro uguaglianza diventi true se entrambe vengono trasformate in lowercase (senza cambiare il valore di name2!).
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let name1 = "john";
+let name2 = "John";
+console.log(name1 != name2);
+console.log(name1 == name2.toLowerCase());
