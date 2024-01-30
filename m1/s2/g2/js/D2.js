@@ -74,7 +74,7 @@
   let totalShoppingCart = 40;
   let prezzoScontato = totalShoppingCart * 0.8;
 
-  if (totalShoppingCart > 50) {
+  if (prezzoScontato > 50) {
     console.log("il totale del tuo carrello è" + prezzoScontato);
   } else {
     console.log("il totale del tuo carrello è " + (prezzoScontato + 10));
@@ -139,9 +139,9 @@
 {
   let val = 7;
   if (val < 5) {
-    console.log("Meno di 10");
-  } else if (val < 10) {
     console.log("Meno di 5");
+  } else if (val < 10) {
+    console.log("Meno di 10");
   } else {
     console.log("Uguale a 10 o maggiore");
   }
