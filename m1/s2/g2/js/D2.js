@@ -31,7 +31,7 @@
 {
   let num1 = 15;
 
-  if (5 % num1) {
+  if (num1 % 5 === 0) {
     console.log("divisibile per 5");
   }
 }
