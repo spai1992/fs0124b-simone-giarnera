@@ -215,7 +215,7 @@ if (crewMass < 500) {
 */
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters[i].gender == "n/a") {
+  if (starWarsCharacters[i].gender === "n/a") {
     starWarsCharacters[i].gender = "robot";
   }
 }
@@ -231,7 +231,7 @@ console.log(charactersNames.length);
 
 for (let i = 0; i < charactersNames.length; i++) {
   for (let x = 0; x < femaleCharacters.length; x++) {
-    if (charactersNames[i] == femaleCharacters[x].name)
+    if (charactersNames[i] === femaleCharacters[x].name)
       charactersNames.splice(i, 1);
   }
 }
