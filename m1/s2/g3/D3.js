@@ -250,15 +250,3 @@ function RandArray(array) {
 
 let rValue = RandArray(starWarsCharacters);
 console.log(rValue);
-
-/*let chiavi = Object.keys(rValue);
-let descrizione = "";
-
-for (let i = 0; i < chiavi.length; i++) {
-  let chiave = chiavi[i];
-  descrizione += `${chiave}: ${rValue[chiave]}, `;
-}
-
-console.log(descrizione.slice(0, -2) + ".");
-
-*/
