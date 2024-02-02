@@ -1,0 +1,9 @@
+.topbarlogo {
+  background-color: #222f3f;
+}
+.topbarlogo img {
+  width: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
