@@ -139,9 +139,9 @@
 
       const addToTheSecond = function () {
         const secondList = document.querySelector("#secondList");
-        const terzaLista = document.createElement("li");
-        terzaLista.textContent = "aggiunta terza lista";
-        secondList.append(terzaLista);
+        const nuovaLista = document.createElement("li");
+        nuovaLista.textContent = "aggiunta una nuova lista";
+        secondList.append(nuovaLista);
       };
 
       addToTheSecond();
@@ -154,7 +154,7 @@
         const divSelector = document.querySelector("div");
         const newPar = document.createElement("p");
         newPar.textContent = "questo è il paragrafo aggiunto al primo div";
-        divSelector.append(newPar);
+        divSelector.appendChild(newPar);
       };
 
       addParagraph();
