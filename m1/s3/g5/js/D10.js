@@ -201,21 +201,14 @@ console.log(rollTheDices(3));
 
 function howManyDays(parametroData) {
   const parti = parametroData.split("-");
-
   const giorno = parti[0];
   const mese = parti[1];
   const anno = parti[2];
-
   const dataFormattata = giorno + "-" + mese + "-" + anno;
-
   const data = new Date(dataFormattata);
-
   const dataOggi = new Date();
-
   const differenza = dataOggi - data;
-
   const giorniPassati = differenza / (1000 * 60 * 60 * 24);
-
   return Math.floor(giorniPassati);
 }
 
@@ -230,12 +223,9 @@ console.log("Sono passati " + howManyDays("01-03-2024") + " giorni");
 function isTodayMyBirthday() {
   const giornoCompleanno = 9;
   const meseCompleanno = 2;
-
   const oggi = new Date();
-
   const giornoCorrente = oggi.getDate();
   const meseCorrente = oggi.getMonth() + 1;
-
   return giornoCorrente === giornoCompleanno && meseCorrente === meseCompleanno;
 }
 
@@ -548,6 +538,8 @@ function stampaContenutoTd() {
   }
 }
 
+stampaContenutoTd();
+
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
@@ -560,27 +552,39 @@ function addRedBg() {
   }
 }
 
+addRedBg();
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
 function addLi() {
   var newLi = document.createElement("li");
-
-  newLi.textContent = 'Nuovo elemento aggiunto ad "myList"';
-
+  newLi.textContent = "Terza li aggiunta da JS";
   let myList = document.querySelector("#myList");
-
   myList.append(newLi);
 }
+
+addLi();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+function svuotaLista() {
+  let myList = document.getElementById("myList");
+  myList.innerHTML = "";
+}
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+function addClass() {
+  let allTr = document.getElementsByTagName("tr");
+  for (var i = 0; i < allTr.length; i++) {
+    allTr[i].classList.add("test");
+  }
+}
 
 // [EXTRA] JS Avanzato
 
