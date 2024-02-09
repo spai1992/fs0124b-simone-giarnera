@@ -479,7 +479,6 @@ function searchAndDivide(stringa) {
   for (let i = 0; i < movies.length; i++) {
     let film = movies[i];
     let titolo = film.Title;
-
     if (titolo.indexOf(stringa) !== -1) {
       newArr.match.push(film);
     } else {
@@ -599,6 +598,16 @@ function addClass() {
   ***
 
 */
+function halfTree(altezza) {
+  for (let x = 1; x <= altezza; x++) {
+    let riga = "";
+    for (let y = 1; y <= x; y++) {
+      riga += "*";
+    }
+    console.log(riga);
+  }
+}
+halfTree(50);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
