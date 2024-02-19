@@ -90,3 +90,31 @@
     font-size: 2.2rem;
   }
 }
+
+@media screen and (min-width: 768px) {
+  main {
+    padding: 2em 2em;
+
+    .titleContainer {
+      width: 70%;
+    }
+
+    .firstParticle {
+      width: 80%;
+    }
+
+    .formatCode {
+      font-size: 2.3rem;
+      font-weight: bold;
+    }
+
+    .tableContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    table {
+      width: 450px;
+    }
+  }
+}
