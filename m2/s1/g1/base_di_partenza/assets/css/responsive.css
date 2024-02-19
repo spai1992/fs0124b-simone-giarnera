@@ -177,4 +177,13 @@
     height: 200px;
     border-radius: 20px;
   }
+  .articles {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: none;
+  }
+  .postContainer {
+    width: 600px;
+  }
 }
