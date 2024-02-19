@@ -1,0 +1,92 @@
+@media screen and (min-width: 576px) {
+  .navigationBar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-text {
+    font-size: 2rem;
+  }
+
+  .navigationBar ul li {
+    display: flex;
+  }
+
+  .lista {
+    display: flex;
+  }
+
+  .navigationBar ul li a {
+    font-size: 2rem;
+  }
+
+  header nav li a::before {
+    content: "\22c6\0020";
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 5rem;
+    line-height: 1.2;
+  }
+
+  .article-text {
+    color: #a0a0a0;
+    font-size: 1.9rem;
+  }
+
+  .logohtml img {
+    width: 80px;
+    padding: 5px;
+    border: 5px solid #01a0c6;
+    outline: 3px solid #a12572;
+  }
+
+  .testoPrimoArticolo {
+    font-size: 1.8rem;
+  }
+
+  table caption {
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+
+  .validationTool {
+    font-size: 1.9rem;
+  }
+
+  .titleNews {
+    background-color: #a3a3a3;
+    margin: 10px 0;
+  }
+  .titleNews h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  .newsText {
+    font-size: 1.9rem;
+  }
+
+  form input {
+    width: 200px;
+  }
+
+  .buttonForm {
+    width: 80px;
+  }
+
+  aside h2 {
+    font-size: 3.7rem;
+    font-weight: bold;
+  }
+
+  .postContainer {
+    font-size: 2rem;
+  }
+
+  footer {
+    font-size: 2.2rem;
+  }
+}
