@@ -1,0 +1,50 @@
+.article {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 20px;
+
+  background-color: #fbf7e3;
+  gap: 20px;
+  border-radius: 50px;
+}
+
+.article img {
+  max-width: 100%;
+}
+
+.article h3 {
+  padding-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.article p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.text-article {
+  max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .article {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  .article h3 {
+    font-size: 1.6rem;
+    padding-bottom: 30px;
+  }
+
+  .article p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+}
