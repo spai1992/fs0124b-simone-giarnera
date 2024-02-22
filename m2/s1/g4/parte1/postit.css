@@ -1,0 +1,51 @@
+body {
+  background-color: #666666;
+  display: flex;
+}
+
+.postit-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  gap: 4.5%;
+  height: 80%;
+  width: 100%;
+}
+
+.postit {
+  width: 350px; /* Aggiusta se necessario per il gap */
+  height: 250px; /* Esempio di altezza basata su viewport e gap */
+  padding: 10px;
+  margin-bottom: 60px;
+  box-shadow: 6px 8px 5px black;
+  transition: transform 0.5s ease;
+}
+
+.giallo {
+  background-color: #f9fac8;
+  transform: rotate(-5deg);
+}
+
+.verde {
+  background-color: #c4f1c5;
+  transform: rotate(5deg);
+}
+.lilla {
+  background-color: #c4c5ef;
+  transform: rotate(-7deg);
+}
+
+.giallo:hover {
+  transform: rotate(0deg);
+  transform: scale(1.2, 1.2);
+}
+.lilla:hover {
+  transform: rotate(0deg);
+  transform: scale(1.2, 1.2);
+}
+.verde:hover {
+  transform: rotate(0deg);
+  transform: scale(1.2, 1.2);
+}
