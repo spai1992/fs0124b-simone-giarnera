@@ -55,29 +55,35 @@
 }
 
 .bottom-navbar-text h2 {
-  font-size: 5rem;
+  font-size: 6.3rem;
+  font-family: "Spectral", serif;
+
+  font-style: normal;
 }
 
 .bottom-navbar-text p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 .bottom-navbar-text a {
   text-decoration: none;
   color: white;
   background-color: black;
-  padding: 15px 20px;
+  padding: 15px 30px;
   width: 150px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border-radius: 50px;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .m-animation {
   background-image: url(../imgs/svg/m-svg.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 39%;
+  width: 37%;
   position: absolute;
   top: 87px;
   right: 6px;
@@ -104,6 +110,11 @@
   box-sizing: border-box;
   padding: 20px;
   width: 70%;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
 }
 
 .title-trending {
@@ -168,8 +179,9 @@
 }
 
 .left-articles {
-  max-width: 70%;
+  max-width: 40%;
   font-family: "Roboto", sans-serif;
+  display: inline-flex;
 }
 
 .all-articles {
@@ -177,21 +189,28 @@
   flex-direction: column;
   align-items: flex-start;
   box-sizing: border-box;
-  padding: 20px;
-  width: 70%;
+
+  width: 100%;
 }
 
 .articles-container {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: 10px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  gap: 30px;
 }
 
 .left-section {
+  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 66%;
+  max-width: 100%;
 }
 
 .left-section .name {
@@ -200,7 +219,7 @@
 }
 
 .title-article {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
@@ -233,10 +252,10 @@
 }
 
 .right-section {
+  flex: 1;
   background-repeat: no-repeat;
   background-position: right;
-  background-size: contain;
-  width: 35%;
+  background-size: 100% auto;
 }
 
 .right-section.background1 {
@@ -262,4 +281,50 @@
 }
 .right-section.background7 {
   background-image: url(../imgs/image20.jpg);
+}
+
+.right-articles {
+  font-family: "Roboto", sans-serif;
+  display: inline-flex;
+
+  max-width: 50%;
+  max-height: 100%;
+}
+
+.tag-collector {
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+
+  gap: 30px;
+  border-bottom: 1px solid black;
+}
+
+.tag-collector h3 {
+  font-weight: 700;
+}
+
+.collector-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 40px;
+}
+
+.collector-buttons a {
+  display: inline-block;
+  text-decoration: none;
+  color: #8c8c8c;
+  border: 1px solid #8c8c8c;
+  padding: 10px 15px;
+}
+
+.submain-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 300px;
+  margin-top: 150px;
+  gap: 100px;
 }
