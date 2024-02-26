@@ -285,8 +285,9 @@
 
 .right-articles {
   font-family: "Roboto", sans-serif;
-  display: inline-flex;
-
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   max-width: 50%;
   max-height: 100%;
 }
@@ -298,7 +299,7 @@
   width: 50%;
 
   gap: 30px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .tag-collector h3 {
@@ -316,9 +317,10 @@
   display: inline-block;
   text-decoration: none;
   color: #8c8c8c;
-  border: 1px solid #8c8c8c;
+  border: 1px solid #dcdcdc;
   border-radius: 2px;
   padding: 10px 15px;
+  font-weight: 300;
 }
 
 .submain-container {
@@ -328,4 +330,18 @@
   margin-left: 300px;
   margin-top: 150px;
   gap: 100px;
+}
+
+.footer-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 50%;
+}
+
+.footer-bar a {
+  text-decoration: none;
+  color: #8c8c8c;
+  font-size: 1.1rem;
+  font-weight: 300;
 }
