@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      @media screen and (max-width: 767px) {
+        .card {
+          width: 16rem;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .card {
+          width: 14rem;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .card {
+          width: 14rem;
+        }
+      }
+      @media screen and (min-width: 1399px) {
+        .card {
+          width: 18rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="assets/img/logo.png" alt="Logo" width="50" height="24" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Saldi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Welcome Summer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Last Minute</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Recensioni</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Cerca posti da sogno"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-danger" type="submit">
+                Cerca
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container bg-body-tertiary mt-5 p-4">
+        <div class="row p-3 border-bottom">
+          <div class="col-6 text-center display-4">Eveline-R</div>
+          <div class="col-6 text-center"><p>-Feel the Freedom</p></div>
+        </div>
+        <div class="row mt-3">
+          <div class="col text-center text-xl-start">
+            <p class="display-6 p-3">
+              Scopri le destinazioni più calde del momento!
+            </p>
+            <button
+              class="bg-info border border-0 text-white px-5 h2 py-2 rounded"
+            >
+              Prenota ora
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-6 h2">Saldi</div>
+        <div class="col-6 text-end h5 text-info">Nacondi sezione</div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card border border-info">
+            <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card border border-info">
+            <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card border border-info">
+            <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2 col-md-4 d-md-none d-lg-block col-lg-3">
+          <div class="card border border-info">
+            <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-6 h2">Welcome Summer</div>
+        <div class="col-6 text-end h5 text-info">Nacondi sezione</div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <div class="position-relative">
+              <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+              <span
+                class="badge text-bg-danger position-absolute m-2 top-0 end-0"
+                >HOT</span
+              >
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <div class="position-relative">
+              <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+              <span
+                class="badge text-bg-danger position-absolute m-2 top-0 end-0"
+                >HOT</span
+              >
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <div class="position-relative">
+              <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+              <span
+                class="badge text-bg-danger position-absolute m-2 top-0 end-0"
+                >HOT</span
+              >
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <div class="position-relative">
+              <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+              <span
+                class="badge text-bg-danger position-absolute m-2 top-0 end-0"
+                >HOT</span
+              >
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <div class="position-relative">
+              <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+              <span
+                class="badge text-bg-danger position-absolute m-2 top-0 end-0"
+                >HOT</span
+              >
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <div class="position-relative">
+              <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+              <span
+                class="badge text-bg-danger position-absolute m-2 top-0 end-0"
+                >HOT</span
+              >
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <div class="position-relative">
+              <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+              <span
+                class="badge text-bg-danger position-absolute m-2 top-0 end-0"
+                >HOT</span
+              >
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2 col-md-4 col-lg-3">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <div class="position-relative">
+              <img src="assets/img/img1.jpg" class="card-img-top" alt="luogo" />
+              <span
+                class="badge text-bg-danger position-absolute m-2 top-0 end-0"
+                >HOT</span
+              >
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Titolo</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                excepturi voluptatibus expedita corrupti libero cupiditate
+                doloribus ducimus accusamus laboriosam vitae assumenda
+              </p>
+              <a href="#" class="btn btn-info px-3">Prenota</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="h3">Offerta del Giorno</p>
+      <div class="row mb-5 img-offers">
+        <div class="col-6 p-2">
+          <img class="img-fluid rounded" src="assets/img/img4.jpg" alt="img" />
+        </div>
+        <div class="col">
+          <p class="display-4">Fushifaru Maldives</p>
+          <p>15.01.2021-31.01.2021</p>
+          <p class="h4 fw-light mb-3">
+            Ville a partire da 500 €, non fartele sfuggire!
+          </p>
+          <div class="badge text-bg-dark p-2 rounded-pill">Best Offer</div>
+        </div>
+      </div>
+
+      <p class="h3">Last Minute</p>
+      <div class="row mb-5 img-offers">
+        <div class="col-6 p-2 col-md-4 col-lg-2">
+          <img class="img-fluid rounded" src="assets/img/img4.jpg" alt="img" />
+        </div>
+        <div class="col-6 p-2 col-md-4 col-lg-2">
+          <img class="img-fluid rounded" src="assets/img/img4.jpg" alt="img" />
+        </div>
+        <div class="col-6 p-2 col-md-4 col-lg-2">
+          <img class="img-fluid rounded" src="assets/img/img4.jpg" alt="img" />
+        </div>
+        <div class="col-6 p-2 col-md-4 d-md-none col-lg-2 d-lg-block">
+          <img class="img-fluid rounded" src="assets/img/img4.jpg" alt="img" />
+        </div>
+        <div class="col-6 p-2 col-md-4 d-md-none col-lg-2 d-lg-block">
+          <img class="img-fluid rounded" src="assets/img/img4.jpg" alt="img" />
+        </div>
+        <div class="col-6 p-2 col-md-4 d-md-none col-lg-2 d-lg-block">
+          <img class="img-fluid rounded" src="assets/img/img4.jpg" alt="img" />
+        </div>
+      </div>
+      <p class="h3">Dicono di noi</p>
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col-2">
+              <img
+                class="img-fluid rounded"
+                src="assets/img/img4.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="col-10">
+              <p>Username</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                dicta illum adipisci minus impedit quos debitis cum fugit
+                accusantium excepturi labore quisquam sunt optio ipsam tempora
+                sit quam, consequatur dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
