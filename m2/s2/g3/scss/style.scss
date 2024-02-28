@@ -1,0 +1,79 @@
+@import "reset";
+@import "colori";
+@import "font";
+@import "spaziature";
+@import "mixins";
+
+body {
+  font-family: $font-family-base;
+}
+.all-container {
+  margin: 0 auto;
+  width: 1400px;
+  height: 100%;
+  position: relative;
+}
+
+.hero {
+  background-color: $bg_hero;
+  height: 600px;
+}
+
+nav {
+  height: 100px;
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+ul {
+  li {
+    a {
+      color: $textColor;
+      font-size: $font-size-large;
+      text-decoration: none;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 1400px;
+}
+.right-container {
+  display: flex;
+  gap: 10px;
+}
+
+h1 {
+  font-size: $font-size-xlarge;
+}
+
+@import "bottoni";
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.hero-left p {
+  color: $textColor;
+  font-size: $font-size-large;
+  line-height: 1.5rem;
+}
+.img-container {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  bottom: -100px;
+  right: 0px;
+}
+.img-container img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  @include hero-picture;
+}

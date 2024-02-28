@@ -1,0 +1,14 @@
+@each $index, $color in $button-colors {
+  .button-#{$index} {
+    background-color: $color;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($color, 10%);
+    }
+  }
+}
