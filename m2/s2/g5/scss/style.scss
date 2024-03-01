@@ -37,7 +37,13 @@ body {
 
 .profile-container {
   background-color: #141414;
-  max-width: 80%;
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .img-profile {
   width: 120px;
@@ -61,4 +67,10 @@ body {
 
 .form-check-label {
   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 600px) {
+  .img-profile {
+    display: none;
+  }
 }
