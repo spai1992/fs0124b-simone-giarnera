@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Il tuo Profilo</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="profile-container">
+        <img
+          class="netflix-logo position-absolute top-0 start-0"
+          src="./assets/netflix_logo.png"
+          alt="logo"
+        />
+        <div class="container edit-profile">
+          <div class="row d-flex flex-column gap-3">
+            <div class="col border-bottom p-0">
+              <h2 class="text-white display-5">Edit Profile</h2>
+            </div>
+            <div class="col border-bottom">
+              <div class="row d-flex">
+                <div class="col-4">
+                  <img
+                    class="img-profile"
+                    src="./assets/avatar.png"
+                    alt="avatar"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="row d-flex flex-column gap-3">
+                    <div class="col p-0 border-bottom">
+                      <div class="input-group mb-3">
+                        <input
+                          type="text"
+                          class="form-control bg-secondary rounded-0 border border-0 text-name"
+                          placeholder="Nome e Cognome"
+                          aria-label="Username"
+                          aria-describedby="basic-addon1"
+                        />
+                      </div>
+                      <p class="text-white p-0">Language:</p>
+                      <a
+                        class="nav-link dropdown-toggle text-white bg-none border p-0 px-1 language-selector mb-3"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        English
+                      </a>
+                    </div>
+                    <div class="col text-white p-0 border-bottom">
+                      <p>Maturity Settings:</p>
+                      <button
+                        type="button"
+                        class="btn maturity-button text-white rounded-0 mb-3 p-1"
+                      >
+                        ALL MATURITY RATINGS
+                      </button>
+                      <p class="maturity-text">
+                        Show titles of all maturity ratings for this profile
+                      </p>
+                    </div>
+                    <div class="col text-white p-0">
+                      <p>Autoplay controls</p>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="autoplayNextEpisode"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="autoplayNextEpisode"
+                        >
+                          Autoplay next episode in a series on all devices.
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="autoplayPreviews"
+                        />
+                        <label
+                          class="form-check-label mb-3"
+                          for="autoplayPreviews"
+                        >
+                          Autoplay previews while browsing on all devices.
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-between">
+              <button type="button" class="btn btn-light rounded-0 px-5">
+                SAVE
+              </button>
+              <button
+                type="button"
+                class="btn bg-none border text-white rounded-0 px-3"
+              >
+                CANCEL
+              </button>
+              <button
+                type="button"
+                class="btn bg-none border text-white rounded-0 px-3"
+              >
+                DELETE PROFILE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

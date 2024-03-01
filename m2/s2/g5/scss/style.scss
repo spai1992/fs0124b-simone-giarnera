@@ -1,0 +1,64 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.img-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.netflix-logo {
+  width: 100px;
+}
+
+.footer-cont {
+  max-width: 50%;
+}
+
+.p-footer {
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-a {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-cont {
+    max-width: 100%;
+  }
+}
+
+//-----------PAGINA PROFILO--------------
+body {
+  background-color: #0e0e0e;
+}
+
+.profile-container {
+  background-color: #141414;
+  max-width: 80%;
+}
+.img-profile {
+  width: 120px;
+  height: 120px;
+}
+
+.edit-profile {
+  width: 50%;
+}
+.language-selector {
+  max-width: 80px;
+  padding: 5px;
+}
+
+.maturity-button {
+  background-color: #333;
+}
+.maturity-text {
+  font-size: 0.8rem;
+}
+
+.form-check-label {
+  font-size: 0.8rem;
+}
