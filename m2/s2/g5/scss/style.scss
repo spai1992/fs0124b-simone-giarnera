@@ -66,11 +66,23 @@ body {
 }
 
 .form-check-label {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
-@media screen and (max-width: 600px) {
+.text-name {
+  max-width: 300px;
+}
+
+@media screen and (max-width: 1200px) {
   .img-profile {
     display: none;
+  }
+  .edit-profile {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .button-form {
+    font-size: 0.8rem;
   }
 }

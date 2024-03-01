@@ -17,14 +17,14 @@
             </div>
             <div class="col border-bottom">
               <div class="row d-flex">
-                <div class="col-4">
+                <div class="col-4 d-none d-xl-block">
                   <img
                     class="img-profile"
                     src="./assets/avatar.png"
                     alt="avatar"
                   />
                 </div>
-                <div class="col-8">
+                <div class="col-12 col-xl-8">
                   <div class="row d-flex flex-column gap-3">
                     <div class="col p-0 border-bottom">
                       <div class="input-group mb-3">
@@ -32,8 +32,6 @@
                           type="text"
                           class="form-control bg-secondary rounded-0 border border-0 text-name"
                           placeholder="Nome e Cognome"
-                          aria-label="Username"
-                          aria-describedby="basic-addon1"
                         />
                       </div>
                       <p class="text-white p-0">Language:</p>
@@ -94,19 +92,22 @@
                 </div>
               </div>
             </div>
-            <div class="col d-flex justify-content-between">
-              <button type="button" class="btn btn-light rounded-0 px-5">
+            <div class="col d-flex justify-content-center gap-2">
+              <button
+                type="button"
+                class="button-form btn btn-light rounded-0 p-0 px-md-5"
+              >
                 SAVE
               </button>
               <button
                 type="button"
-                class="btn bg-none border text-white rounded-0 px-3"
+                class="btn bg-none button-form border text-white rounded-0 p-0 px-md-3"
               >
                 CANCEL
               </button>
               <button
                 type="button"
-                class="btn bg-none border text-white rounded-0 px-3"
+                class="btn button-form bg-none border text-white rounded-0 p-0 px-md-3"
               >
                 DELETE PROFILE
               </button>
