@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio1</title>
+  </head>
+  <body>
+    <script>
+      class User {
+        constructor(firstName, lastName, age, location) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.age = age;
+          this.location = location;
+        }
+
+        comparatore(altroUtente) {
+          if (this.age < altroUtente.age) {
+            return `${altroUtente.firstName} è più vecchio di ${this.firstName}.`;
+          } else if (this.age > altroUtente.age) {
+            return `${altroUtente.firstName} è più giovane di ${this.firstName}.`;
+          } else {
+            return `${altroUtente.firstName} e ${this.firstName} hanno la stessa età.`;
+          }
+        }
+      }
+
+      x = new User("Simone", "Rossi", 50, "Milano");
+      y = new User("Marco", "Bianchi", 40, "Roma");
+      z = new User("Luca", "Verdi", 40, "Palermo");
+
+      console.log(x.comparatore(y));
+      console.log(y.comparatore(z));
+      console.log(z.comparatore(x));
+    </script>
+  </body>
+</html>

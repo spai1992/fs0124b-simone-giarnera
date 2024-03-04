@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio2</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="nomeAnimale-campo"
+      placeholder="Inserisci nome animale"
+    />
+
+    <input
+      type="text"
+      id="proprietario-campo"
+      placeholder="Inserisci nome proprietario"
+    />
+
+    <input type="text" id="specie-campo" placeholder="Inserisci specie" />
+
+    <input type="text" id="razza-campo" placeholder="Inserisci razza" />
+
+    <button id="aggiungi">Aggiungi</button>
+    <ul id="lista-animali"></ul>
+    <script>
+      let nomeAnimaleCampo = document.getElementById("nomeAnimale-campo");
+      let proprietarioCampo = document.getElementById("proprietario-campo");
+      let specieCampo = document.getElementById("specie-campo");
+      let razzaCampo = document.getElementById("razza-campo");
+      let bottone = document.getElementById("aggiungi");
+      let listaAnimali = document.getElementById("lista-animali");
+      let animali = [];
+
+      class Pet {
+        constructor(nomeAnimale, proprietario, specie, razza) {
+          this.nomeAnimale = nomeAnimale;
+          this.proprietario = proprietario;
+          this.specie = specie;
+          this.razza = razza;
+        }
+
+        stessoProprietario(altroProprietario) {
+          if (this.ownerName === altroProprietario.ownerName) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+      }
+
+      let listaForm = function () {
+        listaAnimali.innerHTML = "";
+        animali.forEach((animale) => {
+          let nuovoLi = document.createElement("li");
+          nuovoLi.innerText =
+            "Nome: " +
+            animale.nomeAnimale +
+            ", proprietario: " +
+            animale.proprietario;
+          listaAnimali.appendChild(nuovoLi);
+        });
+      };
+
+      bottone.onclick = function () {
+        let nuovoAnimale = new Pet(
+          nomeAnimaleCampo.value,
+          proprietarioCampo.value,
+          specieCampo.value,
+          razzaCampo.value
+        );
+        animali.push(nuovoAnimale);
+        listaForm();
+        nomeAnimaleCampo.value = "";
+        proprietarioCampo.value = "";
+        specieCampo.value = "";
+        razzaCampo.value = "";
+      };
+    </script>
+  </body>
+</html>
