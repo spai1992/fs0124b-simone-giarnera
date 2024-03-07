@@ -487,26 +487,22 @@
 
       let bottone1 = document.querySelector(".carica-immagini1");
       bottone1.addEventListener("click", () => {
-        chiamata("mountains").then((dati) => {
+        chiamata("jesus").then((dati) => {
           console.log(dati);
           let immagini = document.querySelectorAll(".card-img-top");
-          dati.photos.forEach((photo, index) => {
-            if (index < immagini.length) {
-              immagini[index].src = photo.src.medium;
-            }
+          dati.photos.forEach((photo, i) => {
+            immagini[i].src = photo.src.medium;
           });
         });
       });
 
       let bottone2 = document.querySelector(".carica-immagini2");
       bottone2.addEventListener("click", () => {
-        chiamata("sunset").then((dati) => {
+        chiamata("allah").then((dati) => {
           console.log(dati);
           let immagini = document.querySelectorAll(".card-img-top");
-          dati.photos.forEach((photo, index) => {
-            if (index < immagini.length) {
-              immagini[index].src = photo.src.medium;
-            }
+          dati.photos.forEach((photo, i) => {
+            immagini[i].src = photo.src.medium;
           });
         });
       });
