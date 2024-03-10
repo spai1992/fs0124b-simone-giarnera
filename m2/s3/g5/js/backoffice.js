@@ -20,16 +20,8 @@ form.addEventListener("submit", function (x) {
         "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhYzkxYzJkN2IxMTAwMTkwZTZkYjYiLCJpYXQiOjE3MDk4ODU3MjQsImV4cCI6MTcxMTA5NTMyNH0.tJVVLXS0wlwCGo8sk7Fz3NJVZ4FjH146cv1md04N1Aw", // Inserisci il token di autenticazione
     },
   })
-    .then((response) => {
-      if (response.ok) {
-        alert("Prodotto aggiunto in HomePage!");
-        window.location.href = "index.html";
-      } else {
-        alert("OPS! Qualcosa è andato storto..");
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      alert("Si è verificato un errore");
+    .then((res) => res.json())
+    .then((res) => {
+      window.location.href = "index.html";
     });
 });
