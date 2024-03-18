@@ -8,6 +8,7 @@ class User implements Smartphone {
   lastName: string;
   credito: number = 0;
   numeroChiamate: number = 0;
+  minutiChiamata: number = 0;
 
   constructor(name: string, lastName: string) {
     this.name = name;
@@ -22,7 +23,8 @@ class User implements Smartphone {
     const costoChiamata = minuti * 0.2;
     if (this.credito >= costoChiamata) {
       this.credito -= costoChiamata;
-      this.numeroChiamate += minuti;
+      this.numeroChiamate += 1;
+      this.minutiChiamata += minuti;
     } else {
       console.log("Credito insufficiente per effettuare la chiamata.");
     }
@@ -43,10 +45,11 @@ class User implements Smartphone {
 
 const cliente = new User("Mario", "Rossi");
 
-cliente.ricarica(2);
+cliente.ricarica(10);
 cliente.chiamata(5);
 cliente.chiamata(3);
 cliente.chiamata(2);
 console.log(cliente.chiama404);
 console.log(cliente.getNumeroChiamata);
+console.log(cliente.minutiChiamata);
 cliente.azzeraChiamate();
