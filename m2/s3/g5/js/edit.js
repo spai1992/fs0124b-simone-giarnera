@@ -1,6 +1,6 @@
-const address = new URLSearchParams(location.search);
-const productId = address.get("productId");
-const form = document.getElementById("edit-product-form");
+let address = new URLSearchParams(location.search);
+let productId = address.get("productId");
+let form = document.getElementById("edit-product-form");
 
 fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
   headers: {
@@ -19,7 +19,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  const editedProduct = {
+  let editedProduct = {
     name: document.getElementById("name").value,
     description: document.getElementById("description").value,
     brand: document.getElementById("brand").value,
@@ -41,7 +41,7 @@ form.addEventListener("submit", function (e) {
   });
 });
 
-const deleteButton = document.createElement("button");
+let deleteButton = document.createElement("button");
 deleteButton.textContent = "Elimina";
 deleteButton.className = "btn btn-danger";
 deleteButton.type = "button";
