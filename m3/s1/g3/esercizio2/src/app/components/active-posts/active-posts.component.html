@@ -1,1 +1,9 @@
-<p>active-posts works!</p>
+<div class="container text-center mt-5">
+  <h1>Articoli attivi</h1>
+  <div class="row my-5">
+    <div *ngFor="let articolo of articoliArr" class="col-6">
+      <h2>{{ articolo.title }}</h2>
+      <p>{{ articolo.body }}</p>
+    </div>
+  </div>
+</div>
