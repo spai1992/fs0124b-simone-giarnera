@@ -1,19 +1,10 @@
-<div class="container">
-  <app-navbar></app-navbar>
-  <div class="container text-center mt-5">
-    <div class="row d-flex justify-content-center">
-      <h4>POST IN EVIDENZA:</h4>
-      <div class="col-8">
-        <h2>{{ articoliArr[1].title }}</h2>
-        <p>{{ articoliArr[1].body }}</p>
-      </div>
-    </div>
-  </div>
+<app-navbar></app-navbar>
 
-  <div class="row mt-5">
-    <div *ngFor="let articolo of randomArray" class="col-6">
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- <div *ngFor="let articolo of randomArray" class="col-6">
       <h2>{{ articolo.title }}</h2>
       <p>{{ articolo.body }}</p>
-    </div>
-  </div>
-</div>
+    </div> -->
