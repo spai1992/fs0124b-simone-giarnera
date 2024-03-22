@@ -1,0 +1,27 @@
+<div class="container text-center">
+  <h2 class="mt-5 mb-5">Le nostre auto a marchio Ford:</h2>
+  <div class="row">
+    <div
+      class="col-6 d-flex justify-content-center"
+      *ngFor="let auto of autoFord"
+    >
+      <div
+        class="card"
+        [ngClass]="{
+          'border-success': auto.available,
+          'border-danger': !auto.available
+        }"
+      >
+        <img [src]="auto.modelImage" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ auto.brand }} {{ auto.model }}</h5>
+          <p class="card-text">Anno: {{ auto.year }}</p>
+          <p class="card-text">Prezzo: {{ auto.price | currency : "EUR" }}</p>
+          <button class="btn btn-success" [routerLink]="['/dettagli', auto.id]">
+            Visualizza Dettagli
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

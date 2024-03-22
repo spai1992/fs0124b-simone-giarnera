@@ -1,0 +1,33 @@
+<div class="container text-center">
+  <h2>I nostri marchi:</h2>
+  <div class="row mt-5 mb-5">
+    <div class="col-4" *ngFor="let logoUrl of brandLogos">
+      <img [src]="logoUrl" alt="Brand Logo" />
+    </div>
+  </div>
+  <h2>Potrebbero interessarti:</h2>
+  <div class="row mt-5">
+    <div
+      class="col-6 d-flex justify-content-center"
+      *ngFor="let auto of randomAuto"
+    >
+      <div
+        class="card"
+        [ngClass]="{
+          'border-success': auto.available,
+          'border-danger': !auto.available
+        }"
+      >
+        <img [src]="auto.modelImage" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ auto.brand }} {{ auto.model }}</h5>
+          <p class="card-text">Anno: {{ auto.year }}</p>
+          <p class="card-text">Prezzo: {{ auto.price | currency : "EUR" }}</p>
+          <button class="btn btn-success" [routerLink]="['/dettagli', auto.id]">
+            Visualizza Dettagli
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
