@@ -1,0 +1,2 @@
+<button [routerLink]="['/favorites',telefono.id]" class="btn btn-warning">Preferiti</button>
+    <button (click)="cancellaPizza(telefono.id)" class="btn btn-danger">Carrello</button>

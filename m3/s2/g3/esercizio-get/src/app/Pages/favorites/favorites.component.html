@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-4" *ngFor="let telefono of preferiti">
+    <div class="card" style="width: 18rem">
+      <img
+        [src]="telefono.thumbnail"
+        class="card-img-top"
+        alt="Immagine del prodotto"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ telefono.title }}</h5>
+        <p class="card-text">{{ telefono.description }}</p>
+        <p class="card-text">{{ telefono.price | currency }}</p>
+      </div>
+    </div>
+  </div>
+</div>
