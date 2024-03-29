@@ -20,7 +20,7 @@ export class UserTodoComponent {
   ngOnInit() {
     const users = this.userService.getUsers();
     this.usersWithTodos = users.map((user) => ({
-      user,
+      user: user,
       todos: this.todoService
         .getTodos()
         .filter((todo) => todo.userId === user.id),
