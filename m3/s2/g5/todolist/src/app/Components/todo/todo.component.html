@@ -1,0 +1,25 @@
+<div
+  class="todo-item p-3 mb-2 d-flex justify-content-between"
+  [class.bg-success]="todo.completed"
+  [class.bg-danger]="!todo.completed"
+>
+  <div class="flex-grow-1">
+    <label class="form-check-label" for="todoCheckbox{{ todo.id }}">{{
+      todo.todo
+    }}</label>
+    <br />
+    <small class="text-muted" *ngIf="user"
+      >Assegnato a: {{ user.firstName }} {{ user.lastName }}</small
+    >
+  </div>
+
+  <div>
+    <input
+      class="form-check-input"
+      type="checkbox"
+      [checked]="todo.completed"
+      (change)="onCheckboxChange()"
+      id="todoCheckbox{{ todo.id }}"
+    />
+  </div>
+</div>
