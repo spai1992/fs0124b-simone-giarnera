@@ -1,21 +1,21 @@
 <div
-  class="todo-item p-3 mb-2 d-flex justify-content-between"
+  class="todo-item p-3 mb-2 d-flex justify-content-between position-relative"
   [class.bg-success]="todo.completed"
   [class.bg-danger]="!todo.completed"
 >
   <div class="flex-grow-1">
-    <label class="form-check-label" for="todoCheckbox{{ todo.id }}">{{
-      todo.todo
-    }}</label>
+    <label class="form-check-label" for="todoCheckbox{{ todo.id }}">
+      {{ todo.todo }}
+    </label>
     <br />
-    <small class="text-muted" *ngIf="user"
-      >Assegnato a: {{ user.firstName }} {{ user.lastName }}</small
-    >
+    <p class="text-muted" *ngIf="user">
+      Assegnato a: {{ user.firstName }} {{ user.lastName }}
+    </p>
   </div>
 
   <div>
     <input
-      class="form-check-input"
+      class="form-check-input position-absolute bottom-50 end-0 p-2 me-5"
       type="checkbox"
       [checked]="todo.completed"
       (change)="onCheckboxChange()"

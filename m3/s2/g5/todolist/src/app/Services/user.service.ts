@@ -809,4 +809,8 @@ export class UserService {
   ];
 
   constructor() {}
+
+  getUsers(): iUser[] {
+    return this.utenti;
+  }
 }

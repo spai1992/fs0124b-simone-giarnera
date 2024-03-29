@@ -10,6 +10,7 @@ import { UtentiComponent } from './Pages/utenti/utenti.component';
 import { TodoComponent } from './Components/todo/todo.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { UserTodoComponent } from './Components/user-todo/user-todo.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     UtentiComponent,
     TodoComponent,
     HeaderComponent,
+    UserTodoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

@@ -1,0 +1,29 @@
+<div
+  *ngFor="let userWithTodos of usersWithTodos"
+  class="row border border-primary mb-5"
+>
+  <div class="user-info col-4 text-center">
+    <img
+      [src]="userWithTodos.user.image"
+      alt="Immagine dell'utente"
+      class="user-image"
+    />
+  </div>
+  <div class="user-todos col-8">
+    <div class="row d-flex flex-column">
+      <div class="col-4 mt-3">
+        <h3>
+          {{ userWithTodos.user.firstName }} {{ userWithTodos.user.lastName }}
+        </h3>
+        <p>{{ userWithTodos.user.title }}</p>
+        <p>Todo assegnate:</p>
+      </div>
+
+      <ul class="list-unstyled">
+        <li *ngFor="let todo of userWithTodos.todos" class="col-12">
+          <app-todo [todo]="todo"></app-todo>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
