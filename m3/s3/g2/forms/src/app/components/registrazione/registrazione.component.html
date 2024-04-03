@@ -1,0 +1,54 @@
+<form [formGroup]="form">
+  <input
+    type="text"
+    required
+    formControlName="nome"
+    class="form-control"
+    placeholder="nome"
+  />
+
+  <input
+    type="text"
+    formControlName="cognome"
+    class="form-control"
+    placeholder="cognome"
+  />
+  <input
+    type="password"
+    formControlName="password"
+    class="form-control"
+    placeholder="password"
+  />
+  <input
+    type="password"
+    formControlName="confermapassword"
+    class="form-control"
+    placeholder="conferma la password"
+  />
+  <input
+    type="select"
+    formControlName="genere"
+    class="form-control"
+    placeholder="genere"
+  />
+  <input
+    type="file"
+    formControlName="img"
+    class="form-control"
+    placeholder="Immagine"
+  />
+  <input
+    type="textarea"
+    formControlName="bio"
+    class="form-control"
+    placeholder="biografia"
+  />
+  <input
+    type="text"
+    formControlName="username"
+    class="form-control"
+    placeholder="username"
+  />
+
+  <button class="btn btn-success">Invia</button>
+</form>
