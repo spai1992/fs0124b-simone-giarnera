@@ -1,0 +1,70 @@
+<header class="p-3 mb-3 border-bottom">
+  <div
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+  >
+    <a
+      href="/"
+      class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"
+    >
+      <svg
+        class="bi me-2"
+        width="40"
+        height="32"
+        role="img"
+        aria-label="Bootstrap"
+      >
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+    </a>
+    <ul
+      class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+    >
+      <li>
+        <a routerLink="/" class="nav-link px-2 link-body-emphasis">Home</a>
+      </li>
+      <li>
+        <a
+          routerLink="/profile"
+          class="nav-link px-2 link-body-emphasis"
+          *ngIf="isUserLoggedIn"
+          >Profilo</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/films"
+          class="nav-link px-2 link-body-emphasis"
+          *ngIf="isUserLoggedIn"
+          >film</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/registered"
+          class="nav-link px-2 link-body-emphasis"
+          *ngIf="isUserLoggedIn"
+          >Utenti Registrati</a
+        >
+      </li>
+    </ul>
+
+    <ul
+      class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 justify-content-lg-end"
+    >
+      <li>
+        <a class="nav-link px-2 link-body-emphasis" routerLink="/auth/login"
+          >Sign In</a
+        >
+      </li>
+      <li>
+        <a class="nav-link px-2 link-body-emphasis" routerLink="/auth/register"
+          >Sign Up</a
+        >
+      </li>
+
+      <li *ngIf="isUserLoggedIn">
+        <button (click)="logout()" class="btn btn-danger">Log Out</button>
+      </li>
+    </ul>
+  </div>
+</header>

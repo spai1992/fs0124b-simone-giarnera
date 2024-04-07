@@ -1,0 +1,17 @@
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col" *ngFor="let film of film">
+    <div class="card h-100">
+      <img [src]="film.imgUrl" class="card-img-top" alt="..." />
+      <div class="card-body text-center">
+        <h5 class="card-title">{{ film.title }}</h5>
+        <p class="card-text">{{ film.plot }}</p>
+        <p class="card-text">
+          <small class="text-muted">{{ film.type }}</small>
+        </p>
+      </div>
+      <div class="card-footer d-flex justify-content-center">
+        <button class="btn btn-primary">Aggiungi ai preferiti</button>
+      </div>
+    </div>
+  </div>
+</div>

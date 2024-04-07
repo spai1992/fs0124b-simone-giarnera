@@ -1,0 +1,24 @@
+/* Copre tutto lo schermo con l'immagine di sfondo */
+.homepage-background {
+  position: fixed; /* o 'absolute' se il contenitore è posizionato correttamente */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Assicurati che sia dietro tutto il contenuto */
+}
+
+/* Aggiunge un'opacità all'immagine di sfondo */
+.homepage-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Nero con opacità del 50% */
+  z-index: -1;
+}
