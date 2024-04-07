@@ -34,11 +34,7 @@
       "id": 1,
       "title": "The Imitation Game",
       "year": 2014,
-      "type": [
-        "Biography",
-        "Drama",
-        "Thriller"
-      ],
+      "type": ["Biography", "Drama", "Thriller"],
       "plot": "A lighthouse keeper and his wife living off the coast of Western Australia raise a baby they rescue from a drifting rowing boat.",
       "imgUrl": "https://picsum.photos/id/238/200/300"
     },
@@ -46,9 +42,7 @@
       "id": 2,
       "title": "Blue Jasmine",
       "year": 2013,
-      "type": [
-        "Drama"
-      ],
+      "type": ["Drama"],
       "plot": "During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians.",
       "imgUrl": "https://picsum.photos/id/239/200/300"
     },
@@ -56,11 +50,7 @@
       "id": 3,
       "title": "The Departed",
       "year": 2006,
-      "type": [
-        "Crime",
-        "Drama",
-        "Mystery"
-      ],
+      "type": ["Crime", "Drama", "Mystery"],
       "plot": "A lighthouse keeper and his wife living off the coast of Western Australia raise a baby they rescue from a drifting rowing boat.",
       "imgUrl": "https://picsum.photos/id/240/200/300"
     },
@@ -68,10 +58,7 @@
       "id": 4,
       "title": "Crash",
       "year": 2005,
-      "type": [
-        "Crime",
-        "Drama"
-      ],
+      "type": ["Crime", "Drama"],
       "plot": "During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians.",
       "imgUrl": "https://picsum.photos/id/241/200/300"
     },
@@ -79,11 +66,7 @@
       "id": 5,
       "title": "Silver Linings Playbook",
       "year": 2012,
-      "type": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
+      "type": ["Comedy", "Drama", "Romance"],
       "plot": "A lighthouse keeper and his wife living off the coast of Western Australia raise a baby they rescue from a drifting rowing boat.",
       "imgUrl": "https://picsum.photos/id/242/200/300"
     },
@@ -91,11 +74,7 @@
       "id": 6,
       "title": "The Imitation Game",
       "year": 2014,
-      "type": [
-        "Biography",
-        "Drama",
-        "Thriller"
-      ],
+      "type": ["Biography", "Drama", "Thriller"],
       "plot": "After a stint in a mental institution, former teacher Pat Solitano moves back in with his parents and tries to reconcile with his ex-wife.",
       "imgUrl": "https://picsum.photos/id/243/200/300"
     },
@@ -103,11 +82,7 @@
       "id": 7,
       "title": "Argo",
       "year": 2012,
-      "type": [
-        "Biography",
-        "Drama",
-        "Thriller"
-      ],
+      "type": ["Biography", "Drama", "Thriller"],
       "plot": "During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians.",
       "imgUrl": "https://picsum.photos/id/244/200/300"
     },
@@ -115,11 +90,7 @@
       "id": 8,
       "title": "Silver Linings Playbook",
       "year": 2012,
-      "type": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
+      "type": ["Comedy", "Drama", "Romance"],
       "plot": "During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians.",
       "imgUrl": "https://picsum.photos/id/245/200/300"
     },
@@ -127,10 +98,7 @@
       "id": 9,
       "title": "The Light Between Oceans",
       "year": 2016,
-      "type": [
-        "Drama",
-        "Romance"
-      ],
+      "type": ["Drama", "Romance"],
       "plot": "A lighthouse keeper and his wife living off the coast of Western Australia raise a baby they rescue from a drifting rowing boat.",
       "imgUrl": "https://picsum.photos/id/246/200/300"
     },
@@ -138,11 +106,7 @@
       "id": 10,
       "title": "The King's Speech",
       "year": 2010,
-      "type": [
-        "Biography",
-        "Drama",
-        "History"
-      ],
+      "type": ["Biography", "Drama", "History"],
       "plot": "After a stint in a mental institution, former teacher Pat Solitano moves back in with his parents and tries to reconcile with his ex-wife.",
       "imgUrl": "https://picsum.photos/id/247/200/300"
     },
@@ -150,10 +114,7 @@
       "id": 11,
       "title": "Crash",
       "year": 2005,
-      "type": [
-        "Crime",
-        "Drama"
-      ],
+      "type": ["Crime", "Drama"],
       "plot": "During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians.",
       "imgUrl": "https://picsum.photos/id/248/200/300"
     },
@@ -161,11 +122,7 @@
       "id": 12,
       "title": "No Country for Old Men",
       "year": 2007,
-      "type": [
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
+      "type": ["Crime", "Drama", "Thriller"],
       "plot": "A lighthouse keeper and his wife living off the coast of Western Australia raise a baby they rescue from a drifting rowing boat.",
       "imgUrl": "https://picsum.photos/id/249/200/300"
     },
@@ -173,11 +130,7 @@
       "id": 13,
       "title": "The Artist",
       "year": 2011,
-      "type": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
+      "type": ["Comedy", "Drama", "Romance"],
       "plot": "After a stint in a mental institution, former teacher Pat Solitano moves back in with his parents and tries to reconcile with his ex-wife.",
       "imgUrl": "https://picsum.photos/id/250/200/300"
     },
@@ -185,11 +138,7 @@
       "id": 14,
       "title": "The Artist",
       "year": 2011,
-      "type": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
+      "type": ["Comedy", "Drama", "Romance"],
       "plot": "A lighthouse keeper and his wife living off the coast of Western Australia raise a baby they rescue from a drifting rowing boat.",
       "imgUrl": "https://picsum.photos/id/251/200/300"
     },
@@ -197,11 +146,7 @@
       "id": 15,
       "title": "The Departed",
       "year": 2006,
-      "type": [
-        "Crime",
-        "Drama",
-        "Mystery"
-      ],
+      "type": ["Crime", "Drama", "Mystery"],
       "plot": "A lighthouse keeper and his wife living off the coast of Western Australia raise a baby they rescue from a drifting rowing boat.",
       "imgUrl": "https://picsum.photos/id/252/200/300"
     },
@@ -209,10 +154,7 @@
       "id": 16,
       "title": "The Light Between Oceans",
       "year": 2016,
-      "type": [
-        "Drama",
-        "Romance"
-      ],
+      "type": ["Drama", "Romance"],
       "plot": "During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians.",
       "imgUrl": "https://picsum.photos/id/253/200/300"
     },
@@ -220,11 +162,7 @@
       "id": 17,
       "title": "Argo",
       "year": 2012,
-      "type": [
-        "Biography",
-        "Drama",
-        "Thriller"
-      ],
+      "type": ["Biography", "Drama", "Thriller"],
       "plot": "After a stint in a mental institution, former teacher Pat Solitano moves back in with his parents and tries to reconcile with his ex-wife.",
       "imgUrl": "https://picsum.photos/id/254/200/300"
     },
@@ -232,11 +170,7 @@
       "id": 18,
       "title": "Inception",
       "year": 2010,
-      "type": [
-        "Action",
-        "Adventure",
-        "Sci-Fi"
-      ],
+      "type": ["Action", "Adventure", "Sci-Fi"],
       "plot": "After a stint in a mental institution, former teacher Pat Solitano moves back in with his parents and tries to reconcile with his ex-wife.",
       "imgUrl": "https://picsum.photos/id/255/200/300"
     },
@@ -244,11 +178,7 @@
       "id": 19,
       "title": "The Imitation Game",
       "year": 2014,
-      "type": [
-        "Biography",
-        "Drama",
-        "Thriller"
-      ],
+      "type": ["Biography", "Drama", "Thriller"],
       "plot": "During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians.",
       "imgUrl": "https://picsum.photos/id/256/200/300"
     },
@@ -256,9 +186,7 @@
       "id": 20,
       "title": "Blue Jasmine",
       "year": 2013,
-      "type": [
-        "Drama"
-      ],
+      "type": ["Drama"],
       "plot": "After a stint in a mental institution, former teacher Pat Solitano moves back in with his parents and tries to reconcile with his ex-wife.",
       "imgUrl": "https://picsum.photos/id/257/200/300"
     }
