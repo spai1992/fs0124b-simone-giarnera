@@ -27,4 +27,9 @@ public class Rettangolo {
 
     }
 
+    public static double sommaPerimetri(Rettangolo r1, Rettangolo r2){
+        return r1.perimetroRettangolo() + r2.perimetroRettangolo();
+
+    }
+
 }

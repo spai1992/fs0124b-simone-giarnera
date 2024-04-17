@@ -20,6 +20,7 @@ public class Main {
 
 
         System.out.println("La somma delle aree dei due rettangoli è " + Rettangolo.sommaAree(r1, r2));
+        System.out.println("La somma dei perimetri dei due rettangoli è " + Rettangolo.sommaPerimetri(r1, r2));
 
 
 
