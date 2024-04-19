@@ -2,8 +2,8 @@ package pachetto.java;
 
 public class Rettangolo {
 
-    double base;
-    double altezza;
+    private double base;
+     private double altezza;
 
     public Rettangolo(double a, double b) {
 
