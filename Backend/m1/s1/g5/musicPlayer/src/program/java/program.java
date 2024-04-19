@@ -1,6 +1,7 @@
 package program.java;
 
 import player.java.audio;
+import player.java.image;
 import player.java.video;
 
 public class program {
@@ -48,6 +49,12 @@ public class program {
        v.abbassaVolume();
        v.aumentaLuminosita();
        v.diminuisciLuminosita();
+
+
+       image i = new image("provavideo",3);
+       i.esegui();
+       i.aumentaLuminosita();
+       i.diminuisciLuminosita();
 
 
     }
