@@ -16,43 +16,40 @@ public class player {
 
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
-        System.out.println("Inserisci il tipo di contenuto multimediale");
+        System.out.println("Inserisci il tipo di contenuto multimediale:");
         String tipo = scanner.nextLine();
         switch(tipo){
             case "audio":
-                System.out.println("Inserisci il titolo della traccia audio");
+                System.out.println("Inserisci il titolo della traccia audio:");
                 String titolo = scanner.nextLine();
-                scanner.nextLine();
-                System.out.println("Inserisci il volume che vuoi impostare");
+                System.out.println("Inserisci il volume che vuoi impostare:");
                 int volume = scanner.nextInt();
                 scanner.nextLine();
-                System.out.println("Inserisci la durata della traccia");
+                System.out.println("Inserisci la durata della traccia:");
                 int durata = scanner.nextInt();
                 scanner.nextLine();
                 array[i] = new audio(titolo,volume,durata);
                 break;
 
                 case "video":
-                    System.out.println("Inserisci il titolo del video");
+                    System.out.println("Inserisci il titolo del video:");
                     String titolo2 = scanner.nextLine();
-                    scanner.nextLine();
-                    System.out.println("Inserisci il volume che vuoi impostare");
+                    System.out.println("Inserisci il volume che vuoi impostare:");
                     int volume2 = scanner.nextInt();
                     scanner.nextLine();
-                    System.out.println("Inserisci la durata del video");
+                    System.out.println("Inserisci la durata del video:");
                     int durata2 = scanner.nextInt();
                     scanner.nextLine();
-                    System.out.println("Inserisci la luminosità del video");
+                    System.out.println("Inserisci la luminosità del video:");
                     int lum = scanner.nextInt();
                     scanner.nextLine();
                     array[i] = new video(titolo2,volume2,durata2,lum);
                     break;
 
             case "image":
-                System.out.println("Inserisci il titolo dell'immagine");
+                System.out.println("Inserisci il titolo dell'immagine:");
                 String titolo3 = scanner.nextLine();
-                scanner.nextLine();
-                System.out.println("Inserisci la luminosità del immagine");
+                System.out.println("Inserisci la luminosità del immagine:");
                 int lum2 = scanner.nextInt();
                 scanner.nextLine();
                 array[i] = new image(titolo3,lum2);
@@ -70,7 +67,7 @@ public class player {
 
         int i = 0;
  do {
-     System.out.println("Inserisci un numero di contenuto multimediale");
+     System.out.println("Inserisci un numero di contenuto multimediale (1-5), 0 per uscire dal programma:");
      int elemento = scanner.nextInt();
      if (elemento == 0){
          break;
