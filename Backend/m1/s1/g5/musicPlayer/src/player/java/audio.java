@@ -5,7 +5,7 @@ public class audio extends media implements riproducibili {
     private int volume;
     private int durata;
     private static final int minimo = 0;
-    private static final int massimo = 0;
+    private static final int massimo = 10;
 
 
     // creo il costruttore di audio, per importare tramite il super il titolo dalla classe astratta,

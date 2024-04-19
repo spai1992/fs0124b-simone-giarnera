@@ -2,6 +2,8 @@ package player.java;
 
 public class video extends media implements riproducibili, visualizza {
 
+
+
     private int volume;
     private int durata;
     private int luminosità;
