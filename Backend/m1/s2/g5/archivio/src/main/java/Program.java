@@ -12,8 +12,8 @@ public class Program {
         FileArchivio archivio = new FileArchivio();
 
         // Aggiunge alcuni libri e riviste all'archivio
-        Libri libro1 = new Libri("Il Signore degli Anelli", 1954, 1170, "J.R.R. Tolkien", "Fantasy");
-        Libri libro2 = new Libri("1984", 1949, 328, "George Orwell", "Distopia");
+        Libri libro1 = new Libri("Educazione Siberiana", 1974, 320, "Audit", "Storico");
+        Libri libro2 = new Libri("Harry Potter", 2003, 540, "J.K. Rowling", "Fantasy");
         Riviste rivista1 = new Riviste("National Geographic", 1888, 200, Periodicita.MENSILE);
         Riviste rivista2 = new Riviste("Scientific American", 1845, 150, Periodicita.SETTIMANALE);
 
