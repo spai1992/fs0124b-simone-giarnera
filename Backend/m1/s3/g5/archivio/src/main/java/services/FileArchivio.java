@@ -1,142 +1,139 @@
+
 package services;
 
+
 import data.Catalogo;
-import data.Libri;
-import data.Periodicita;
-import data.Riviste;
-import org.apache.commons.io.FileUtils;
+import data.Prestito;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.io.BufferedReader;
+
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+
 public class FileArchivio implements Archivio {
 
-    // Logger per tracciare le informazioni e gli errori
+    // Logger per il tracciamento degli eventi
     private static final Logger logger = LoggerFactory.getLogger(FileArchivio.class);
 
-    // Lista per memorizzare gli elementi del catalogo
-    private ArrayList<Catalogo> lista = new ArrayList<>();
-    // File che rappresenta il catalogo salvato su disco
+    // Gestione dell'entità manager factory e dell'entità manager per la persistenza
+    protected EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
+    protected EntityManager em = emf.createEntityManager();
+
+    // File che simula il database, per esempio per operazioni non JPA
     private File f = new File("./catalogo.csv");
 
-    // Metodo per salvare gli elementi della lista nel file CSV
-    public void save() {
-        try {
-            FileUtils.delete(f); // Cancella il file esistente prima di salvare i nuovi dati
-        } catch (IOException err) {
-            logger.error("Eccezione durante l'eliminazione", err); // Log dell'errore in caso di problemi nella cancellazione del file
-        }
-        lista.forEach(c -> {
-            try {
-                // Scrive i dati di libri o riviste nel file CSV con codifica ISO_8859_1
-                if (c instanceof Libri) {
-                    var lines = List.of(c.getISBN().toString() + "," + c.getTitolo() + "," + c.getAnnoPubblicazione() + "," + c.getNumeroPagine() + "," + ((Libri) c).getAutore() + "," + ((Libri) c).getGenere());
-                    FileUtils.writeLines(f, StandardCharsets.ISO_8859_1.name(), lines, true);
-                } else if (c instanceof Riviste) {
-                    var lines = List.of(c.getISBN().toString() + "," + c.getTitolo() + "," + c.getAnnoPubblicazione() + "," + c.getNumeroPagine() + "," + ((Riviste) c).getPeriodicita());
-                    FileUtils.writeLines(f, StandardCharsets.ISO_8859_1.name(), lines, true);
-                }
-            } catch (IOException e) {
-                logger.error("Eccezione:", e); // Log dell'errore in caso di problemi nella scrittura del file
-            }
-        });
+    // Metodo per salvare un'entità Catalogo nel database
+    @Override
+    public void save(Catalogo cat) {
+        var t = em.getTransaction();
+        t.begin();
+        em.persist(cat); // Persiste l'oggetto nel database
+        t.commit(); // Commit della transazione
     }
 
-    // Metodo per caricare i dati dal file CSV
-    public void load() {
-        leggiFile(f);
-    }
-
-    // Metodo per aggiungere un nuovo elemento al catalogo e salvarlo
+    // Metodo vuoto, probabilmente per futura implementazione
     @Override
     public void add(Catalogo c) {
-        lista.add(c);
-        save();
+
     }
 
-    // Metodo per eliminare un elemento dal catalogo in base all'ISBN e salvarlo
+    // Metodo per eliminare un catalogo basato sull'ISBN
     @Override
     public void deleteISBN(Integer ISBN) {
-        lista.removeIf(el -> el.getISBN().equals(ISBN));
-        save();
+        try {
+            Catalogo catalogo = em.find(Catalogo.class, ISBN); // Trova il catalogo per ISBN
+
+            if (catalogo != null) {
+                var t = em.getTransaction();
+                t.begin();
+                em.remove(catalogo); // Rimuove il catalogo dal database
+                t.commit();
+                logger.info("Catalogo con ISBN {} rimosso con successo", ISBN);
+            } else {
+                logger.warn("Nessun catalogo trovato con ISBN {}", ISBN);
+            }
+        } catch (Exception e) {
+            logger.error("Errore durante la rimozione del catalogo con ISBN {}", ISBN, e);
+        }
     }
 
-    // Metodo per ottenere un elemento del catalogo in base all'ISBN
+    // Metodo per ottenere cataloghi basati sull'autore
     @Override
-    public Optional<Catalogo> getByISBN(Integer ISBN) {
-        return lista.stream().filter(el -> el.getISBN().equals(ISBN)).findFirst();
+    public List<Catalogo> getByAutore(String autore) {
+        try {
+            var query = em.createNamedQuery("GET_AUTORE");
+            query.setParameter("AUTORE", autore);
+            List<Catalogo> result = query.getResultList();
+            return result;
+        } catch (Exception e) {
+            logger.error("Elemento con autore specificato non esiste", e);
+            return Collections.emptyList();
+        }
     }
 
-    // Metodo per ottenere un elemento del catalogo in base all'anno di pubblicazione
+    // Metodo per ottenere cataloghi per anno di pubblicazione
     @Override
-    public Optional<Catalogo> getAnno(Integer anno) {
-        return lista.stream().filter(el -> el.getAnnoPubblicazione().equals(anno)).findFirst();
+    public List<Catalogo> getAnno(Integer AnnoPubblicazione) {
+        try {
+            var query = em.createNamedQuery("GET_ANNO");
+            query.setParameter("AnnoPubblicazione", AnnoPubblicazione);
+            List<Catalogo> result = query.getResultList();
+            return result;
+        } catch (Exception e) {
+            logger.error("Nessun libro uscito in questo anno nel catalogo", e);
+            return null;
+        }
     }
 
-    // Metodo per visualizzare tutti i libri di un autore specifico
+    // Metodo vuoto, probabilmente per futura implementazione
     @Override
     public void getAutore(String autore) {
-        lista.stream().filter(el -> el instanceof Libri && ((Libri) el).getAutore().equals(autore)).forEach(System.out::println);
+
     }
 
-    // Metodo per ottenere tutti i libri di un autore specifico
-    public List<Catalogo> getByAutore(String autore) {
-        return lista.stream().filter(el -> el instanceof Libri && ((Libri) el).getAutore().equals(autore)).toList();
-    }
-
-    // Metodo per ottenere tutti gli elementi del catalogo di un certo anno di pubblicazione
-    public List<Catalogo> getByAnno(Integer anno) {
-        return lista.stream().filter(el -> el.getAnnoPubblicazione().equals(anno)).toList();
-    }
-
-    // Metodo per ottenere la lista attuale del catalogo
-    public ArrayList<Catalogo> getLista() {
-        return lista;
-    }
-
-    // Metodo per leggere e caricare i dati da un file CSV
-    public List<String> leggiFile(File file) {
-        List<String> lines = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] el = line.split(",");
-                String titolo = el[1];
-                String annoPubblicazioneStr = el[2];
-                String numeroPagineStr = el[3];
-                int annoPubblicazione, numeroPagine;
-                try {
-                    annoPubblicazione = Integer.parseInt(annoPubblicazioneStr);
-                    numeroPagine = Integer.parseInt(numeroPagineStr);
-                } catch (NumberFormatException e) {
-                    System.err.println("Errore di conversione: " + e.getMessage());
-                    continue;
-                }
-                // Distingue tra libri e riviste e li aggiunge alla lista
-                if (el.length == 5) {
-                    String periodicitàStr = el[4];
-                    Periodicita periodicita = Periodicita.valueOf(periodicitàStr);
-                    var rivista = new Riviste(titolo, annoPubblicazione, numeroPagine, periodicita);
-                    lista.add(rivista);
-                } else if (el.length == 6) {
-                    String autore = el[4];
-                    String genere = el[5];
-                    var libro = new Libri(titolo, annoPubblicazione, numeroPagine, autore, genere);
-                    lista.add(libro);
-                }
-                lines.add(line); // Aggiunge la linea letta alla lista di linee
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+    // Metodo per ottenere cataloghi basati sul titolo
+    @Override
+    public List<Catalogo> getByTitolo(String titolo) {
+        try {
+            var query = em.createNamedQuery("GET_TITOLO", Catalogo.class);
+            query.setParameter("titolo", titolo);
+            List<Catalogo> result = query.getResultList();
+            return result;
+        } catch (Exception e) {
+            logger.error("Errore durante la ricerca per titolo", e);
+            return Collections.emptyList();
         }
-        return lines;
     }
 
+    // Metodo per ottenere elementi in prestito, non implementato
+    @Override
+    public List<Catalogo> getElementiInPrestito(Integer numeroTessera) {
+        return List.of();
+    }
+
+    // Metodo per ottenere prestiti scaduti non restituiti, non implementato
+    @Override
+    public List<Prestito> getPrestitiScadutiNonRestituiti() {
+        return List.of();
+    }
+
+    // Metodo per ottenere un catalogo per ISBN
+    @Override
+    public Optional<Catalogo> getISBN(Integer ISBN) {
+        try {
+            var query = em.createNamedQuery("GET_ISBN");
+            query.setParameter("ISBN", ISBN);
+            var cat = (Catalogo) query.getSingleResult();
+            return Optional.of(cat);
+        } catch (Exception e) {
+            logger.error("Exception searching catalogo by id", e);
+            return Optional.empty();
+        }
+    }
 }

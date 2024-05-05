@@ -1,49 +1,41 @@
 import data.Libri;
-import data.Periodicita;
 import data.Riviste;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import services.FileArchivio;
 
-
 public class Program {
+    // Creazione di un logger per il monitoraggio degli eventi del programma
+    Logger logger = LoggerFactory.getLogger(Program.class);
+
+    // Metodo principale del programma che viene eseguito all'avvio
     public static void main(String[] args) {
+        // Creazione di un'istanza del gestore di archiviazione file
+        var FileArchivio = new FileArchivio();
 
-        FileArchivio archivio = new FileArchivio();
+        // Creazione di istanze di libri con diversi dettagli
+        Libri libri1 = new Libri("Viaggio oltre i confini", 2003, 2345, "Lucia", "fantasy");
+        Libri libri2 = new Libri("Notte stellata", 1998, 5823, "Giovanni", "romanzo");
+        Libri libri3 = new Libri("Le onde del destino", 2010, 3674, "Francesca", "avventura");
+        Libri libri4 = new Libri("Sussurri del bosco", 2001, 4829, "Roberto", "mistero");
+        Libri libri5 = new Libri("Il mistero della cripta", 2015, 8301, "Elena", "thriller");
+        Libri libri6 = new Libri("Risveglio primaverile", 1992, 4490, "Matteo", "drammatico");
 
-        // Aggiunge alcuni libri e riviste all'archivio
-        Libri libro1 = new Libri("Educazione Siberiana", 1974, 320, "Audit", "Storico");
-        Libri libro2 = new Libri("Harry Potter", 2003, 540, "J.K. Rowling", "Fantasy");
-        Riviste rivista1 = new Riviste("National Geographic", 1888, 200, Periodicita.MENSILE);
-        Riviste rivista2 = new Riviste("Scientific American", 1845, 150, Periodicita.SETTIMANALE);
+        // Salvataggio degli oggetti libri nel sistema di archiviazione file
+        FileArchivio.save(libri1);
+        FileArchivio.save(libri2);
+        FileArchivio.save(libri3);
+        FileArchivio.save(libri4);
+        FileArchivio.save(libri5);
 
-        archivio.add(libro1);
-        archivio.add(libro2);
-        archivio.add(rivista1);
-        archivio.add(rivista2);
+        // Rimozione di libri dal sistema di archiviazione usando un identificativo ISBN specifico
+        FileArchivio.deleteISBN(2);
+        FileArchivio.deleteISBN(4);
 
-        // Stampa l'archivio completo
-        System.out.println("Archivio completo:");
-        archivio.getLista().forEach(System.out::println);
+        // Stampa delle informazioni di un libro basate sul titolo cercato
+        System.out.println(FileArchivio.getByTitolo("onde"));
 
-        // Test della ricerca per ISBN
-        System.out.println("\nRicerca per ISBN:");
-        archivio.getByISBN(1).ifPresentOrElse(System.out::println, () -> System.out.println("Elemento non trovato"));
-
-        // Test della ricerca per autore
-        System.out.println("\nRicerca per autore:");
-        archivio.getAutore("George Orwell");
-
-        // Test della ricerca per anno di pubblicazione
-        System.out.println("\nRicerca per anno di pubblicazione:");
-        archivio.getByAnno(1949).forEach(System.out::println);
-
-        // Test rimozione elemento
-        archivio.deleteISBN(1);
-
-        // Stampa archivio completo dopo eliminazione
-        System.out.println("Archivio completo:");
-        archivio.getLista().forEach(System.out::println);
-
+        // Stampa delle informazioni di un libro non presente, per verificare il comportamento del sistema
+        System.out.println(FileArchivio.getByTitolo("Harry"));
     }
 }
