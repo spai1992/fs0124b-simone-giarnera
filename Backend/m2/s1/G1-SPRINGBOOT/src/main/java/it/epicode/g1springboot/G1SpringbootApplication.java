@@ -11,6 +11,7 @@ public class G1SpringbootApplication {
         SpringApplication.run(G1SpringbootApplication.class, args);
 var myCounter = new Counter();
 myCounter.increment();
+//prova
 
 var myCounter2 = new Counter();
 myCounter2.increment();
