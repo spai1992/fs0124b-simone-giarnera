@@ -33,9 +33,8 @@ public class Program {
         FileArchivio.deleteISBN(4);
 
         // Stampa delle informazioni di un libro basate sul titolo cercato
-        System.out.println(FileArchivio.getByTitolo("onde"));
+        System.out.println(FileArchivio.getByTitolo("miste"));
 
-        // Stampa delle informazioni di un libro non presente, per verificare il comportamento del sistema
-        System.out.println(FileArchivio.getByTitolo("Harry"));
+
     }
 }
