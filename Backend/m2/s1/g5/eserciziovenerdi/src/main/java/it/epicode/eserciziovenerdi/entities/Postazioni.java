@@ -1,27 +1,36 @@
 package it.epicode.eserciziovenerdi.entities;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "postazioni")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 
+@Data
 
 public class Postazioni extends Base {
     private String descrizione;
     private TipoPostazione tipo;
-    private Long occupantiMax;
-    @ManyToOne
+    private int occupantiMax;
+    private int occupati = 0;
+
+
+
+    @OneToOne
     @JoinColumn(name = "edificio_id")
     private Edificio edificio;
+
+    @Builder(setterPrefix = "with")
+    public Postazioni(Long id, String descrizione, TipoPostazione tipo, int occupantiMax, Edificio edificio) {
+        super(id);
+        this.descrizione = descrizione;
+        this.tipo = tipo;
+        this.occupantiMax = occupantiMax;
+
+        this.edificio = edificio;
+    }
+    public Postazioni() {
+        super();
+
+    }
 }
