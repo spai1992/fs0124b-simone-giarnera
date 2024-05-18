@@ -5,53 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="676f1db6-2c07-4793-950c-297e0c0eda1d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/entities/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/entities/Base.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/entities/Edificio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/entities/Postazioni.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/entities/Prenotazione.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/entities/TipoPostazione.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/entities/Utente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/repository/EdificioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/repository/PostazioneRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/repository/PrenotazioneRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/repository/UtenteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/services/EdificioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/services/PostazioneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/services/PrenotazioneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/services/UtenteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/EserciziovenerdiApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/Repository/EdificioRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/Repository/PostazioneRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/Repository/PrenotazioneRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/Repository/UtenteRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/Runner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/entities/AppConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/entities/Base.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/entities/Edificio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/entities/Postazioni.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/entities/Prenotazione.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/entities/TipoPostazione.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/entities/Utente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/services/EdificioService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/services/PostazioneService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/services/PrenotazioneService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/java/it/epicode/eserciziovenerdi/services/UtenteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eserciziovenerdi/src/test/java/it/epicode/eserciziovenerdi/EserciziovenerdiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/repository/PrenotazioneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/repository/PrenotazioneRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/services/PrenotazioneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/progetto/src/main/java/it/epicode/progetto/services/PrenotazioneService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,16 +18,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "spai1992"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/spai1992/fs0124b-simone-giarnera.git",
+    "accountId": "f58416cf-53f8-4062-9b6f-a481599a587d"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2gbv7SXPuRaK0Nh0CfiL6o7vSWl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -78,6 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ProgettoApplication.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -85,11 +51,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/simon/Desktop/fs0124b-simone-giarnera/Backend/m2/s1/g5",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/simo/Desktop/Epicode/Backend/m2/s1/g5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "spring.configuration.checksum": "0fa3c82b1dcd0b2c9efa017a7bedc7fc",
     "vue.rearranger.settings.migration": "true"
   },

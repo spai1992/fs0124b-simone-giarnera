@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Slf4j
 @Service
@@ -26,19 +25,19 @@ public class PrenotazioneService {
     }
 
 
-
-
-    public Prenotazione crea(Long postazioneId, Utente utenti, LocalDate dataPrenotazione){
+    public void crea(Long postazioneId, Utente utente, LocalDate dataPrenotazione){
         var postazione = postazioneService.findById(postazioneId);
         if(postazione == null){
-            log.info("Non c'è la postazione che stai cercando");
-            return null;
+            log.warn("La postazione che stai cercando non esiste!");
         }else if((postazione.getOccupantiMax() - prenotazioniDao.findBydataPrenotazioneAndPostazioniId(dataPrenotazione, postazione.getId()).size()) == 0){
-            log.info("Non è possibile prenotare, posti esauriti per la data " + dataPrenotazione);
-            return null;
+            log.warn("Non è possibile prenotare, posti esauriti per la data " + dataPrenotazione);
+        }else if(prenotazioniDao.findBydataPrenotazioneAndUtentiId(dataPrenotazione, utente.getId()) != null ){
+            log.warn("Non puoi prenotare per lo stesso giorno");
+
         }else{
             log.info("Prenotazione effettuata" );
-            return new Prenotazione(postazione, utenti, dataPrenotazione);
+            prenotazioniDao.save(new Prenotazione(postazione, utente, dataPrenotazione));
+
         }
 
     }
