@@ -59,8 +59,6 @@ public class Runner implements CommandLineRunner {
             System.err.println(ex.getMessage());
         }
 
-
-
-
+        
     }
 }

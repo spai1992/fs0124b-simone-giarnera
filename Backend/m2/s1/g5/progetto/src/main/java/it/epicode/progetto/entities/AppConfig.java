@@ -6,9 +6,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-
-    @Bean(name="Simone")
-    public Utente simoneBean(){
+    @Bean(name = "Simone")
+    public Utente simoneBean() {
         return Utente.builder()
                 .withUsername("Spai")
                 .withNome("Simone")
@@ -18,8 +17,8 @@ public class AppConfig {
     }
 
     @Bean(name = "Franco")
-    public Utente francoBean(){
-        return  Utente.builder()
+    public Utente francoBean() {
+        return Utente.builder()
                 .withUsername("Frenk")
                 .withNome("Franco")
                 .withCognome("Rossi")
@@ -27,8 +26,8 @@ public class AppConfig {
                 .build();
     }
 
-    @Bean(name="Palazzo1")
-    public Edificio palazzo1Bean(){
+    @Bean(name = "Palazzo1")
+    public Edificio palazzo1Bean() {
         return Edificio.builder()
                 .withName("Palazzo1")
                 .withCitta("Milano")
@@ -37,7 +36,7 @@ public class AppConfig {
     }
 
     @Bean(name = "Palazzo2")
-    public Edificio palazzo2Bean(){
+    public Edificio palazzo2Bean() {
         return Edificio.builder()
                 .withName("Palazzo2")
                 .withCitta("Roma")
@@ -46,7 +45,7 @@ public class AppConfig {
     }
 
     @Bean(name = "Postazione1")
-    public Postazioni postazione1Bean(){
+    public Postazioni postazione1Bean() {
         return Postazioni.builder()
                 .withDescrizione("in rovina")
                 .withTipo(TipoPostazione.OPENSPACE)
@@ -56,7 +55,7 @@ public class AppConfig {
     }
 
     @Bean(name = "Postazione2")
-    public Postazioni postazione2Bean(){
+    public Postazioni postazione2Bean() {
         return Postazioni.builder()
                 .withOccupantiMax(2)
                 .withTipo(TipoPostazione.RIUNIONE)
@@ -64,8 +63,5 @@ public class AppConfig {
                 .withEdificio(palazzo2Bean())
                 .build();
     }
-
-
-
 
 }

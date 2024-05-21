@@ -11,7 +11,7 @@ import lombok.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Utente extends Base{
+public class Utente extends Base {
     private String username;
     private String nome;
     private String cognome;
