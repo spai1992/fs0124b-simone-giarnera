@@ -3,6 +3,7 @@ package it.epicode.devices.services;
 import it.epicode.devices.controllers.models.DispositiviRequest;
 import it.epicode.devices.entities.Dipendenti;
 import it.epicode.devices.entities.Dispositivi;
+import it.epicode.devices.enums.StatoDispositivo;
 import it.epicode.devices.repositories.DispositiviRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,7 +55,14 @@ public class DispositiviService {
     public Dispositivi assegnaDispositivo(Long idDipendente, Long idDispositivo){
         Dipendenti dipendenti = dipendente.findById(idDipendente);
         Dispositivi dispositivo = dispositivi.findById(idDispositivo).orElseThrow();
+if(dispositivo.getStatoDispositivo().equals("disponibile")){
+    dispositivo.setDipendenti(dipendenti);
 
+    dispositivi.save(dispositivo);
+}else{
+    throw new RuntimeException("Non è possibile assegnare" + dispositivo.getStatoDispositivo() );
+}
+return dispositivo;
     }
 
 

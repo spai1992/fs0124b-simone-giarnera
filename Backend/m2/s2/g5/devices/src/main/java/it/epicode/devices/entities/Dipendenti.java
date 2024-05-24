@@ -11,6 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(setterPrefix = "with")
+
 public class Dipendenti extends Base{
     private String username;
     private String name;
