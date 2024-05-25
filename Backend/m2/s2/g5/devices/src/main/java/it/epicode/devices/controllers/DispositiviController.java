@@ -1,6 +1,7 @@
 package it.epicode.devices.controllers;
 
 import it.epicode.devices.controllers.exceptions.BadRequestException;
+import it.epicode.devices.controllers.exceptions.DispositivoNonDisponibileException;
 import it.epicode.devices.controllers.exceptions.DispositivoNotFoundException;
 import it.epicode.devices.controllers.models.DispositiviRequest;
 import it.epicode.devices.entities.Dispositivi;
@@ -61,13 +62,18 @@ public class DispositiviController {
         return ResponseEntity.noContent().build();
     }
     @PutMapping("/{idDipendente}/{idDispositivo}")
-    public ResponseEntity<Dispositivi>aggiungiDipendente(@PathVariable Long idDipendente, @PathVariable Long idDispositivo){
+    public ResponseEntity<String> aggiungiDipendente(@PathVariable Long idDipendente, @PathVariable Long idDispositivo){
         try {
             Dispositivi dispositivo = dispositivi.assegnaDispositivo(idDipendente, idDispositivo);
             return ResponseEntity.ok(dispositivo);
+        } catch(DispositivoNonDisponibileException e){
+            String errorMessage = "Impossibile assegnare. " + e.getMessage();
+            return ResponseEntity.badRequest().body(errorMessage);
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(null);
         }
     }
+
+
 
 }
