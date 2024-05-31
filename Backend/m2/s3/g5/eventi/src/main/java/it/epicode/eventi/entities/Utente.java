@@ -18,6 +18,7 @@ public class Utente extends Base{
     @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "ruolo_id")
     private Ruoli ruolo;
-    @OneToMany(mappedBy = "utente", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "utente_id")
     private List<Evento> evento = new ArrayList<>();
 }
