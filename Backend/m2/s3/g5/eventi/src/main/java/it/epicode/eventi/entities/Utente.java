@@ -1,12 +1,9 @@
 package it.epicode.eventi.entities;
 
-import it.epicode.eventi.enums.Ruoli;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
@@ -18,7 +15,9 @@ import java.util.List;
 @Builder(setterPrefix = "with")
 public class Utente extends Base{
     private String nome;
+    @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "ruolo_id")
     private Ruoli ruolo;
-    @OneToMany(mappedBy = "utente")
-    private List<Evento> evento;
+    @OneToMany(mappedBy = "utente", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    private List<Evento> evento = new ArrayList<>();
 }
