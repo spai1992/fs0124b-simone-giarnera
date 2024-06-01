@@ -20,5 +20,14 @@ public class Utente extends Base{
     private Ruoli ruolo;
     @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "utente_id")
-    private List<Evento> evento = new ArrayList<>();
+    private List<Evento> evento;
+
+    @Builder(setterPrefix = "with")
+    public Utente(String nome, Ruoli ruolo) {
+        this.nome = nome;
+        this.ruolo = ruolo;
+    }
+    public void addEvento(Evento e) {
+        this.evento.add(e);
+    }
 }

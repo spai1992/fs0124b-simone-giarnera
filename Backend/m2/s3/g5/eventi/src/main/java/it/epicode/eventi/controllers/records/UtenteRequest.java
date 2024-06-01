@@ -7,11 +7,8 @@ import jakarta.validation.constraints.NotNull;
 
 public record UtenteRequest(
         @NotBlank
-        @NotNull(message = "Il nome è obbligatorio")
+        @NotNull(message = "Nome è obbligatorio")
         String nome,
-        @NotEmpty
-        @NotNull(message = "Il ruolo è obbligatorio")
-        Ruoli ruolo
-
-) {
+        @NotNull(message = "Ruolo è obbligatorio")
+        Long ruoloid) {
 }

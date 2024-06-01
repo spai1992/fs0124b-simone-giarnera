@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public record EventoRequest(
 
         @NotNull(message = "Il nome dell'evento è obbligatorio")
-        String nome,
+        String titolo,
         @NotNull(message = "La descrizione è obbligatoria")
         String descrizione,
         @NotNull(message = "La data è obbligatoria")
@@ -18,8 +18,7 @@ public record EventoRequest(
         Luoghi luogo,
         @NotNull(message = "Il numero di posti è obbligatorio")
                 @Min(value =1, message = "Il minimo dei posti è 1")
-        int numeroPosti
-
-
-) {
+        int numeroPosti,
+        @NotNull(message = "necessario")
+        Long utenteid) {
 }

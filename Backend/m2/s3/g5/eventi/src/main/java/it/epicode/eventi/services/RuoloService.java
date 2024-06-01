@@ -1,7 +1,7 @@
 package it.epicode.eventi.services;
 
 import it.epicode.eventi.entities.Ruoli;
-import it.epicode.eventi.repositories.Ruolirepository;
+import it.epicode.eventi.repositories.RuoliRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class RuoloService {
 
     @Autowired
-    Ruolirepository ruoli;
+    RuoliRepository ruoli;
 
 
     public Ruoli save(String name){
