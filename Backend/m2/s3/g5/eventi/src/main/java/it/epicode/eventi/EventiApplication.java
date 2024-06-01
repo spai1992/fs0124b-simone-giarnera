@@ -1,7 +1,5 @@
 package it.epicode.eventi;
 
-import it.epicode.eventi.services.RuoloService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
