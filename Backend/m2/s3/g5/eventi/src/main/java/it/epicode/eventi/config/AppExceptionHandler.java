@@ -1,6 +1,6 @@
 package it.epicode.eventi.config;
 
-import it.epicode.eventi.controllers.exceptions.ApiException;
+import it.epicode.eventi.services.exceptions.ApiException;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.ResponseEntity;
