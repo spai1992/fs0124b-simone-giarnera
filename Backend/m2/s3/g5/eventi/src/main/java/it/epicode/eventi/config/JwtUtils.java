@@ -13,11 +13,9 @@ import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 
-/**
- * Gestione delle funzionalità legate al token jwt.
- */
+
 @Component
-public class JwtUtils { // centralizza la gestione del JWT
+public class JwtUtils {
 
     @Value("${jwt.key}")
     private String securityKey; // = "chiavesegreta123chiavesegreta123";
@@ -28,14 +26,14 @@ public class JwtUtils { // centralizza la gestione del JWT
         byte[] keyBytes = securityKey.getBytes();
         Key key = Keys.hmacShaKeyFor(keyBytes);
 
-        // recupero l'utente di sistema
+
         var user = (SecurityUserDetails) auth.getPrincipal();
         var token = Jwts.builder() // builder per il token
-                .subject(user.getUsername()) // contenuto del token
-                .issuedAt(new Date()) // data di rilascio
-                .issuer("MySpringApplication") // nome di colui che ha scritto il token
-                .expiration(new Date(new Date().getTime() + expirationMs)) // data di scadenza
-                .signWith(key) // firma e cifra il token
+                .subject(user.getUsername())
+                .issuedAt(new Date())
+                .issuer("MySpringApplication")
+                .expiration(new Date(new Date().getTime() + expirationMs))
+                .signWith(key)
                 .compact();
         return token;
     }
